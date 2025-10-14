@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Hub - Your Ultimate Home & Garden Guide</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#14B8A6',
+                        secondary: '#0F766E'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <header class="w-full bg-white shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 flex items-center justify-center bg-primary rounded-lg">
+                        <i class="ri-home-4-fill text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-['Pacifico'] text-2xl text-gray-800">Home Hub</div>
+                        <div class="text-xs text-gray-500 -mt-1">Your Ultimate Home Resource</div>
+                    </div>
+                </div>
+                <div class="flex-1 max-w-md mx-8">
+                    <div class="relative">
+                        <input type="text" placeholder="Search articles, tips, and guides..."
+                            class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 pl-10 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        <div
+                            class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 flex items-center justify-center">
+                            <i class="ri-search-line text-gray-500 text-sm"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <div class="flex items-center space-x-1 text-sm text-gray-600">
+                        <div class="w-4 h-4 flex items-center justify-center">
+                            <i class="ri-user-line text-primary"></i>
+                        </div>
+                        <span>50K+ Readers</span>
+                    </div>
+                    <div class="flex items-center space-x-1 text-sm text-gray-600">
+                        <div class="w-4 h-4 flex items-center justify-center">
+                            <i class="ri-article-line text-primary"></i>
+                        </div>
+                        <span>1000+ Articles</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <nav class="flex items-center space-x-8 h-14">
+                    <a href="#"
+                        class="text-gray-700 hover:text-primary transition-colors font-medium text-sm border-b-2 border-primary pb-4">Home</a>
+                    <div class="relative group">
+                        <button
+                            class="text-gray-700 hover:text-primary transition-colors font-medium text-sm flex items-center space-x-1 pb-4">
+                            <span>Home Improvement</span>
+                        </button>
+                    </div>
+                    <div class="relative group">
+                        <button
+                            class="text-gray-700 hover:text-primary transition-colors font-medium text-sm flex items-center space-x-1 pb-4">
+                            <span>Home Décor</span>
+                        </button>
+                    </div>
+                    <div class="relative group">
+                        <button
+                            class="text-gray-700 hover:text-primary transition-colors font-medium text-sm flex items-center space-x-1 pb-4">
+                            <span>Gardening</span>
+                        </button>
+                    </div>
+                    <div class="relative group">
+                        <button
+                            class="text-gray-700 hover:text-primary transition-colors font-medium text-sm flex items-center space-x-1 pb-4">
+                            <span>Cleaning & Organization</span>
+                        </button>
+                    </div>
+                    <div class="relative group">
+                        <button
+                            class="text-gray-700 hover:text-primary transition-colors font-medium text-sm flex items-center space-x-1 pb-4">
+                            <span>DIY Projects</span>
+                        </button>
+                    </div>
+                    <a href="#" class="text-gray-700 hover:text-primary transition-colors font-medium text-sm pb-4">Real
+                        Estate</a>
+                    <a href="#"
+                        class="text-gray-700 hover:text-primary transition-colors font-medium text-sm pb-4">Lifestyle</a>
+                    <a href="#"
+                        class="text-gray-700 hover:text-primary transition-colors font-medium text-sm pb-4">Write for
+                        Us</a>
+                    <a href="#"
+                        class="text-gray-700 hover:text-primary transition-colors font-medium text-sm pb-4">About</a>
+                    <a href="#"
+                        class="text-gray-700 hover:text-primary transition-colors font-medium text-sm pb-4">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="relative min-h-[600px] flex items-center justify-center overflow-hidden"
+        style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20elegant%20living%20room%20interior%20with%20natural%20lighting%2C%20comfortable%20seating%20area%2C%20plants%20and%20warm%20wood%20accents%2C%20minimalist%20design%20with%20soft%20neutral%20colors%2C%20clean%20white%20walls%20and%20large%20windows%20creating%20a%20peaceful%20home%20atmosphere%20perfect%20for%20relaxation%20and%20family%20time&width=1920&height=1080&seq=hero-bg&orientation=landscape'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-white">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    Your Ultimate<br>
+                    <span class="text-primary">Home Hub</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto opacity-90">
+                    Discover inspiring ideas, expert tips, and beautiful designs to transform your home into the perfect
+                    sanctuary
+                </p>
+                <div class="max-w-md mx-auto">
+                    <div class="flex bg-white rounded-lg p-2 shadow-lg">
+                        <input type="text" placeholder="Search for home ideas..."
+                            class="flex-1 px-4 py-2 border-none outline-none text-gray-700 text-sm">
+                        <button
+                            class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-secondary transition-colors whitespace-nowrap">
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="ri-search-line"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Explore Home Categories</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Browse through our curated collection of home
+                    improvement ideas and inspiration</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 bg-cover bg-center"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Cozy%20modern%20living%20room%20with%20comfortable%20sofa%2C%20coffee%20table%2C%20decorative%20pillows%20and%20warm%20lighting%2C%20contemporary%20furniture%20arrangement%20with%20neutral%20colors%20and%20stylish%20decor%20elements%20creating%20an%20inviting%20family%20space&width=400&height=300&seq=living-room&orientation=landscape')">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Living Room</h3>
+                        <p class="text-gray-600">Create the perfect gathering space with comfortable seating and stylish
+                            decor</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 bg-cover bg-center"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20kitchen%20interior%20with%20white%20cabinets%2C%20marble%20countertops%2C%20stainless%20steel%20appliances%20and%20pendant%20lighting%2C%20clean%20design%20with%20island%20and%20bar%20stools%20creating%20functional%20cooking%20space&width=400&height=300&seq=kitchen&orientation=landscape')">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Kitchen</h3>
+                        <p class="text-gray-600">Design a functional and beautiful kitchen that's the heart of your home
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 bg-cover bg-center"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Beautiful%20garden%20with%20colorful%20flowers%2C%20green%20plants%2C%20pathways%20and%20outdoor%20seating%20area%2C%20landscaped%20yard%20with%20trees%20and%20natural%20elements%20creating%20peaceful%20outdoor%20living%20space&width=400&height=300&seq=garden&orientation=landscape')">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Garden</h3>
+                        <p class="text-gray-600">Transform your outdoor space into a beautiful and relaxing garden oasis
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 bg-cover bg-center"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Serene%20bedroom%20with%20comfortable%20bed%2C%20soft%20bedding%2C%20nightstands%20and%20warm%20lighting%2C%20peaceful%20sleeping%20space%20with%20neutral%20colors%20and%20minimal%20decor%20creating%20restful%20atmosphere&width=400&height=300&seq=bedroom&orientation=landscape')">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Bedroom</h3>
+                        <p class="text-gray-600">Create a peaceful retreat with comfortable furnishings and calming
+                            colors</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 bg-cover bg-center"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20bathroom%20with%20clean%20tiles%2C%20elegant%20fixtures%2C%20vanity%20mirror%20and%20contemporary%20design%2C%20spa-like%20atmosphere%20with%20neutral%20colors%20and%20organized%20storage%20solutions&width=400&height=300&seq=bathroom&orientation=landscape')">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Bathroom</h3>
+                        <p class="text-gray-600">Design a spa-like bathroom with modern fixtures and elegant finishes
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 bg-cover bg-center"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Organized%20home%20office%20with%20desk%2C%20chair%2C%20shelving%20and%20natural%20lighting%2C%20productive%20workspace%20with%20modern%20furniture%20and%20decor%20creating%20inspiring%20work%20environment&width=400&height=300&seq=office&orientation=landscape')">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Home Office</h3>
+                        <p class="text-gray-600">Build an inspiring workspace that boosts productivity and creativity
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Latest Articles</h2>
+                <p class="text-lg text-gray-600">Stay updated with the newest home improvement trends and tips</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 bg-cover bg-center object-top"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20minimalist%20living%20room%20makeover%20with%20before%20and%20after%20transformation%2C%20clean%20white%20walls%2C%20contemporary%20furniture%20and%20stylish%20decor%20creating%20bright%20airy%20space&width=400&height=300&seq=article1&orientation=landscape')">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span>Sarah Johnson</span>
+                            <span class="mx-2">•</span>
+                            <span>March 15, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">10 Living Room Makeover Ideas on a Budget
+                        </h3>
+                        <p class="text-gray-600 mb-4">Transform your living space without breaking the bank with these
+                            creative and affordable decorating tips.</p>
+                        <a href="#" class="text-primary font-medium hover:text-secondary transition-colors">Read More
+                            →</a>
+                    </div>
+                </article>
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 bg-cover bg-center object-top"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Small%20kitchen%20organization%20with%20smart%20storage%20solutions%2C%20organized%20cabinets%2C%20pantry%20shelves%20and%20efficient%20space%20utilization%20creating%20functional%20compact%20cooking%20area&width=400&height=300&seq=article2&orientation=landscape')">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span>Michael Chen</span>
+                            <span class="mx-2">•</span>
+                            <span>March 12, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Small Kitchen Organization Hacks</h3>
+                        <p class="text-gray-600 mb-4">Maximize your kitchen storage with these clever organization
+                            solutions for small spaces.</p>
+                        <a href="#" class="text-primary font-medium hover:text-secondary transition-colors">Read More
+                            →</a>
+                    </div>
+                </article>
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 bg-cover bg-center object-top"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Beautiful%20spring%20garden%20with%20blooming%20flowers%2C%20colorful%20plants%2C%20garden%20tools%20and%20landscaping%20elements%2C%20seasonal%20gardening%20preparation%20and%20planting%20activities&width=400&height=300&seq=article3&orientation=landscape')">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span>Emma Rodriguez</span>
+                            <span class="mx-2">•</span>
+                            <span>March 10, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Spring Garden Preparation Guide</h3>
+                        <p class="text-gray-600 mb-4">Get your garden ready for the growing season with this
+                            comprehensive preparation checklist.</p>
+                        <a href="#" class="text-primary font-medium hover:text-secondary transition-colors">Read More
+                            →</a>
+                    </div>
+                </article>
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 bg-cover bg-center object-top"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Cozy%20bedroom%20decor%20with%20soft%20textiles%2C%20warm%20lighting%2C%20comfortable%20bedding%20and%20relaxing%20atmosphere%2C%20peaceful%20sleeping%20space%20with%20natural%20materials%20and%20calming%20colors&width=400&height=300&seq=article4&orientation=landscape')">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span>David Thompson</span>
+                            <span class="mx-2">•</span>
+                            <span>March 8, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Creating a Cozy Bedroom Retreat</h3>
+                        <p class="text-gray-600 mb-4">Design the perfect bedroom sanctuary with these tips for comfort
+                            and relaxation.</p>
+                        <a href="#" class="text-primary font-medium hover:text-secondary transition-colors">Read More
+                            →</a>
+                    </div>
+                </article>
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 bg-cover bg-center object-top"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20bathroom%20renovation%20with%20contemporary%20fixtures%2C%20elegant%20tiles%2C%20vanity%20lighting%20and%20spa-like%20design%20elements%20creating%20luxurious%20bathing%20experience&width=400&height=300&seq=article5&orientation=landscape')">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span>Lisa Wang</span>
+                            <span class="mx-2">•</span>
+                            <span>March 5, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Bathroom Renovation Trends 2024</h3>
+                        <p class="text-gray-600 mb-4">Discover the latest bathroom design trends that will transform
+                            your space into a modern oasis.</p>
+                        <a href="#" class="text-primary font-medium hover:text-secondary transition-colors">Read More
+                            →</a>
+                    </div>
+                </article>
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 bg-cover bg-center object-top"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Productive%20home%20office%20setup%20with%20ergonomic%20desk%2C%20comfortable%20chair%2C%20organized%20storage%20and%20natural%20lighting%2C%20inspiring%20workspace%20design%20for%20remote%20work%20productivity&width=400&height=300&seq=article6&orientation=landscape')">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span>James Miller</span>
+                            <span class="mx-2">•</span>
+                            <span>March 3, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Home Office Setup for Productivity</h3>
+                        <p class="text-gray-600 mb-4">Create an efficient and inspiring workspace that enhances your
+                            work-from-home experience.</p>
+                        <a href="#" class="text-primary font-medium hover:text-secondary transition-colors">Read More
+                            →</a>
+                    </div>
+                </article>
+            </div>
+            <div class="text-center mt-12">
+                <button
+                    class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-secondary transition-colors whitespace-nowrap">
+                    View All Articles
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Featured Articles</h2>
+                <p class="text-lg text-gray-600">Hand-picked content from our expert contributors</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 bg-cover bg-center object-top"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Sustainable%20eco-friendly%20home%20design%20with%20natural%20materials%2C%20energy%20efficient%20features%2C%20solar%20panels%20and%20green%20building%20elements%20creating%20environmentally%20conscious%20living%20space&width=400&height=300&seq=featured1&orientation=landscape')">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span>Green Living Expert</span>
+                            <span class="mx-2">•</span>
+                            <span>Featured</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Sustainable Home Design Ideas</h3>
+                        <p class="text-gray-600 mb-4">Learn how to create an eco-friendly home that's both beautiful and
+                            environmentally responsible.</p>
+                        <a href="#" class="text-primary font-medium hover:text-secondary transition-colors">Read More
+                            →</a>
+                    </div>
+                </article>
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 bg-cover bg-center object-top"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Smart%20home%20technology%20integration%20with%20automated%20lighting%2C%20security%20systems%2C%20voice%20control%20devices%20and%20modern%20tech%20features%20creating%20connected%20intelligent%20living%20environment&width=400&height=300&seq=featured2&orientation=landscape')">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span>Tech Home Specialist</span>
+                            <span class="mx-2">•</span>
+                            <span>Featured</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Smart Home Technology Guide</h3>
+                        <p class="text-gray-600 mb-4">Discover the latest smart home innovations that will make your
+                            life easier and more comfortable.</p>
+                        <a href="#" class="text-primary font-medium hover:text-secondary transition-colors">Read More
+                            →</a>
+                    </div>
+                </article>
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 bg-cover bg-center object-top"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Interior%20design%20color%20psychology%20with%20different%20color%20schemes%2C%20paint%20samples%2C%20mood%20boards%20and%20decorating%20elements%20showing%20emotional%20impact%20of%20colors%20in%20home%20spaces&width=400&height=300&seq=featured3&orientation=landscape')">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span>Color Design Expert</span>
+                            <span class="mx-2">•</span>
+                            <span>Featured</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Color Psychology in Home Design</h3>
+                        <p class="text-gray-600 mb-4">Understand how colors affect mood and atmosphere to create the
+                            perfect ambiance in your home.</p>
+                        <a href="#" class="text-primary font-medium hover:text-secondary transition-colors">Read More
+                            →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-4">Stay Updated with Home Tips</h2>
+            <p class="text-xl text-gray-300 mb-8">Get the latest home improvement ideas, seasonal tips, and exclusive
+                content delivered to your inbox</p>
+            <div class="max-w-md mx-auto">
+                <div class="flex bg-white rounded-lg p-2">
+                    <input type="email" placeholder="Enter your email address"
+                        class="flex-1 px-4 py-2 border-none outline-none text-gray-700 text-sm">
+                    <button
+                        class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-secondary transition-colors whitespace-nowrap">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+            <p class="text-sm text-gray-400 mt-4">Join over 50,000 homeowners who trust our weekly newsletter</p>
+        </div>
+    </section> -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="lg:col-span-1">
+                    <div class="font-['Pacifico'] text-2xl text-primary mb-4">logo</div>
+                    <p class="text-gray-300 mb-6">Your ultimate destination for home improvement inspiration, expert
+                        tips, and beautiful design ideas.</p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+                            <i class="ri-pinterest-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Categories</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Living Room</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Kitchen</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Bedroom</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Bathroom</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Garden</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Home Office</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Design Tips</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">DIY Guides</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Budget Planning</a>
+                        </li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Seasonal Ideas</a>
+                        </li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Expert Advice</a>
+                        </li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Inspiration
+                                Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Contact</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Careers</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Press</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Privacy Policy</a>
+                        </li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Terms of Service</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">© 2024 Home Hub. All rights reserved.</p>
+                    <div class="flex items-center space-x-6 mt-4 md:mt-0">
+                        <span class="text-gray-400 text-sm">Trusted by homeowners worldwide</span>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-6 h-6 flex items-center justify-center">
+                                <i class="ri-visa-fill text-gray-400"></i>
+                            </div>
+                            <div class="w-6 h-6 flex items-center justify-center">
+                                <i class="ri-paypal-fill text-gray-400"></i>
+                            </div>
+                            <div class="w-6 h-6 flex items-center justify-center">
+                                <i class="ri-mastercard-fill text-gray-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script id="search-functionality">
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInputs = document.querySelectorAll('input[type="text"], input[type="email"]');
+            searchInputs.forEach(input => {
+                input.addEventListener('focus', function () {
+                    this.parentElement.classList.add('ring-2', 'ring-primary', 'ring-opacity-50');
+                });
+                input.addEventListener('blur', function () {
+                    this.parentElement.classList.remove('ring-2', 'ring-primary', 'ring-opacity-50');
+                });
+            });
+        });
+    </script>
+    <script id="smooth-scroll">
+        document.addEventListener('DOMContentLoaded', function () {
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    <script id="newsletter-subscription">
+        document.addEventListener('DOMContentLoaded', function () {
+            const subscribeButton = document.querySelector('section.bg-gray-900 button');
+            const emailInput = document.querySelector('section.bg-gray-900 input[type="email"]');
+            if (subscribeButton && emailInput) {
+                subscribeButton.addEventListener('click', function () {
+                    const email = emailInput.value.trim();
+                    if (email && email.includes('@')) {
+                        alert('Thank you for subscribing! You will receive our latest home tips and updates.');
+                        emailInput.value = '';
+                    } else {
+                        alert('Please enter a valid email address.');
+                    }
+                });
+                emailInput.addEventListener('keypress', function (e) {
+                    if (e.key === 'Enter') {
+                        subscribeButton.click();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
