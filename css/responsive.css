@@ -1,0 +1,10 @@
+@media only screen and (max-width: 768px) {
+    .article-image {
+        height: 192px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .article-image {
+        height: 192px;
+    }
+}
