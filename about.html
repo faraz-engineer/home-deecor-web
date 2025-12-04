@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Home Hub | Your Ultimate Home & Garden Guide</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#14B8A6',
+                        secondary: '#0F766E'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .animate-fade-in-up-delay {
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .animate-fade-in-up-delay-2 {
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .animate-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        .group:hover .group-hover\:text-primary {
+            color: #14B8A6;
+        }
+
+        .group:hover .group-hover\:text-gray-800 {
+            color: #1f2937;
+        }
+
+        @media (max-width: 768px) {
+            .hero-text {
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <header class="w-full bg-white shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center space-x-3">
+                    <div
+                        class="w-10 h-10 flex items-center justify-center bg-primary rounded-lg transform hover:scale-110 transition-transform duration-300">
+                        <i class="ri-home-4-fill text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-['Pacifico'] text-2xl text-gray-800">Home Hub</div>
+                        <div class="text-xs text-gray-500 -mt-1 hidden sm:block">Your Ultimate Home Resource</div>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-100">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <nav class="hidden lg:flex items-center space-x-8 h-14">
+                            <a href="#"
+                                class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm border-b-2 border-primary pb-1 transform hover:scale-105">Home</a>
+                            <div class="relative group">
+                                <button
+                                    class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-1 transform hover:scale-105">
+                                    <span>Home Improvement</span>
+                                </button>
+                            </div>
+                            <div class="relative group">
+                                <button
+                                    class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-1 transform hover:scale-105">
+                                    <span>Home Décor</span>
+                                </button>
+                            </div>
+                            <div class="relative group">
+                                <button
+                                    class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-1 transform hover:scale-105">
+                                    <span>Gardening</span>
+                                </button>
+                            </div>
+                            <div class="relative group">
+                                <button
+                                    class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-1 transform hover:scale-105">
+                                    <span>Cleaning & Organization</span>
+                                </button>
+                            </div>
+                            <div class="relative group">
+                                <button
+                                    class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-1 transform hover:scale-105">
+                                    <span>DIY Projects</span>
+                                </button>
+                            </div>
+                            <a href="#"
+                                class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm pb-1 transform hover:scale-105">Real
+                                Estate</a>
+                            <a href="#"
+                                class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm pb-1 transform hover:scale-105">Blog</a>
+
+                        </nav>
+                        <button class="lg:hidden flex items-center justify-center w-8 h-8" id="mobile-menu-button">
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="ri-menu-line text-gray-700"></i>
+                            </div>
+                        </button>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-100 bg-white shadow-lg">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <nav class="py-4 space-y-2">
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium border-l-2 border-primary pl-4">Home</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Home
+                            Improvement</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Home
+                            Décor</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Gardening</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Cleaning
+                            & Organization</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">DIY
+                            Projects</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Real
+                            Estate</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Blog</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Write
+                            for Us</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">About</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    </div>
+    </div>
+    </header>
+    <section class="relative min-h-[400px] md:min-h-[500px] flex items-center justify-center overflow-hidden"
+        style="background-image: url('https://readdy.ai/api/search-image?query=Professional%20team%20of%20diverse%20home%20design%20experts%20working%20together%20in%20modern%20office%20space%20with%20architectural%20plans%2C%20color%20samples%20and%20home%20improvement%20materials%2C%20collaborative%20workspace%20environment%20with%20natural%20lighting%20and%20contemporary%20furniture&width=1920&height=1080&seq=about-hero&orientation=landscape'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-white">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">
+                    About <span class="text-primary">Home Hub</span>
+                </h1>
+                <p class="text-lg sm:text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90 animate-fade-in-up-delay">
+                    Welcome to Home Discovering - Your Ultimate Guide to Home Improvement
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-fade-in-up">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">About Home Hub</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        "Welcome to Home Discovering - Your Ultimate Guide to Home Improvement. At Home Discovering, we
+                        are passionate about transforming homes into beautiful, functional spaces. Whether you're
+                        renovating your entire home or tackling a small DIY project, we provide the expertise and
+                        inspiration you need to create the home of your dreams."
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6">
+                        What started as a small blog sharing DIY tips and design inspiration has grown into a
+                        comprehensive platform trusted by over 50,000 homeowners worldwide. We've helped countless
+                        families transform their houses into homes that reflect their personalities and lifestyles.
+                    </p>
+                    <p class="text-lg text-gray-600">
+                        Today, our team of experts continues to provide practical advice, innovative ideas, and
+                        step-by-step guidance to make home improvement accessible to everyone, regardless of budget or
+                        experience level.
+                    </p>
+                </div>
+                <div class="animate-fade-in-up-delay">
+                    <div class="relative h-96 bg-cover bg-center rounded-xl shadow-lg"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Cozy%20home%20interior%20showcasing%20before%20and%20after%20transformation%20with%20modern%20furniture%2C%20warm%20lighting%2C%20plants%20and%20personal%20touches%20creating%20a%20welcoming%20family%20living%20space%20with%20natural%20materials%20and%20contemporary%20design%20elements&width=600&height=400&seq=story&orientation=landscape')">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
+                    <p class="text-lg text-gray-600">
+                        Our mission is simple: to help homeowners, renters, and DIY enthusiasts create spaces that
+                        reflect their personal style and meet their needs. We believe that home improvement should be
+                        accessible to everyone, whether you're a first-timer or a seasoned pro. From small updates to
+                        large renovations, we aim to make your home projects easier, more enjoyable, and, most
+                        importantly, successful.
+                    </p>
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6 mt-6">Why Choose Us?</h2>
+                        <p class="text-lg text-gray-600">
+                            We believe in providing content that is not only informative but also easy to understand and
+                            apply to real-life situations. Our team is made up of passionate home improvement
+                            enthusiasts, professional decorators, gardeners, and DIY experts who are committed to
+                            helping you achieve your goals.
+                            Join our growing community of homeowners, decorators, gardeners, and DIYers who are
+                            dedicated to making their homes better, one project at a time. Whether you’re here for
+                            advice, inspiration, or practical tips, we’re here to support you on your home improvement
+                            journey.
+                            Thank you for visiting our website. Let’s build, decorate, and improve your home together!
+
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">What We Offer</h2>
+                    <div class="space-y-6">
+                        <div class="flex flex-col space-y-2">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-6 h-6 flex items-center justify-center">
+                                    <i class="ri-hammer-line text-primary"></i>
+                                </div>
+                                <span class="text-gray-700 font-medium">Home Improvement</span>
+                            </div>
+                            <p class="text-gray-600 ml-9">Tips and advice on everything from remodeling your kitchen to
+                                upgrading your bathroom. We cover the essentials and the latest trends to help you
+                                improve your space.</p>
+                        </div>
+                        <div class="flex flex-col space-y-2">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-6 h-6 flex items-center justify-center">
+                                    <i class="ri-palette-line text-primary"></i>
+                                </div>
+                                <span class="text-gray-700 font-medium">Home Decor</span>
+                            </div>
+                            <p class="text-gray-600 ml-9">Ideas and inspiration for decorating your home, including
+                                color schemes, furniture choices, and styling tips to create the perfect atmosphere.</p>
+                        </div>
+                        <div class="flex flex-col space-y-2">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-6 h-6 flex items-center justify-center">
+                                    <i class="ri-leaf-line text-primary"></i>
+                                </div>
+                                <span class="text-gray-700 font-medium">Gardening</span>
+                            </div>
+                            <p class="text-gray-600 ml-9">Whether you're looking to start your own garden, grow fresh
+                                herbs, or add some greenery to your indoor spaces, we provide easy-to-follow guides and
+                                care tips.
+
+                            </p>
+                        </div>
+                        <div class="flex flex-col space-y-2">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-6 h-6 flex items-center justify-center">
+                                    <i class="ri-cleaning-line text-primary"></i>
+                                </div>
+                                <span class="text-gray-700 font-medium">Cleaning and Organization</span>
+                            </div>
+                            <p class="text-gray-600 ml-9">Practical tips to keep your home sparkling clean and
+                                clutter-free. Learn how to organize every room, from the kitchen to the closet, and
+                                simplify your daily routine.</p>
+                        </div>
+                        <div class="flex flex-col space-y-2">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-6 h-6 flex items-center justify-center">
+                                    <i class="ri-tools-line text-primary"></i>
+                                </div>
+                                <span class="text-gray-700 font-medium">DIY Projects</span>
+                            </div>
+                            <p class="text-gray-600 ml-9">Hands-on tutorials and step-by-step instructions for creative
+                                projects, from building custom furniture to making your own home decor pieces.</p>
+                        </div>
+                        <div class="flex flex-col space-y-2">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-6 h-6 flex items-center justify-center">
+                                    <i class="ri-building-line text-primary"></i>
+                                </div>
+                                <span class="text-gray-700 font-medium">Real Estate</span>
+                            </div>
+                            <p class="text-gray-600 ml-9">Insights into buying, selling, and maintaining a home. We
+                                provide tips for homeowners and investors to make informed decisions in the real estate
+                                market.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="py-12 md:py-16 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 animate-fade-in-up">Stay Updated with Home Tips</h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-8 animate-fade-in-up-delay">Get the latest home improvement
+                ideas, seasonal tips, and exclusive content delivered to your inbox</p>
+            <div class="max-w-md mx-auto animate-fade-in-up-delay-2">
+                <div
+                    class="flex flex-col sm:flex-row bg-white rounded-lg p-2 transform hover:scale-105 transition-transform duration-300">
+                    <input type="email" placeholder="Enter your email address"
+                        class="flex-1 px-4 py-2 mb-2 sm:mb-0 border-none outline-none text-gray-700 text-sm">
+                    <button
+                        class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-secondary transition-all duration-300 transform hover:scale-110 whitespace-nowrap">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+            <p class="text-sm text-gray-400 mt-4">Join over 50,000 homeowners who trust our weekly newsletter</p>
+        </div>
+    </section>
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-1">
+                    <div class="flex items-center space-x-3">
+                        <div
+                            class="w-10 h-10 flex items-center justify-center bg-primary rounded-lg transform hover:scale-110 transition-transform duration-300">
+                            <i class="ri-home-4-fill text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <div class="font-['Pacifico'] text-2xl text-gray-800 text-white">Home Hub</div>
+                            <div class="text-xs text-gray-500 -mt-1 hidden sm:block text-white">Your Ultimate Home
+                                Resource</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6 mt-4">Your ultimate destination for home improvement inspiration,
+                        expert
+                        tips, and beautiful design ideas.</p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+                            <i class="ri-pinterest-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Categories</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#"
+                                class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Home
+                                Improvement</a></li>
+                        <li><a href="#"
+                                class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Gardening</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Home
+                                Decor</a></li>
+                        <li><a href="#"
+                                class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Cleaning
+                                and Organization</a></li>
+                        <li><a href="#"
+                                class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Real
+                                Estate</a></li>
+                        <li><a href="#"
+                                class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">DIY
+                                Projects</a></li>
+                        <li><a href="#"
+                                class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#"
+                                class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">About
+                                Us</a></li>
+                        <li><a href="#"
+                                class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Contact
+                                Us</a></li>
+                        <li><a href="#"
+                                class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Write
+                                for Us</a></li>
+                        <li><a href="#"
+                                class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Privacy
+                                Policy</a></li>
+                        <li><a href="#"
+                                class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Terms
+                                of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">© 2025 Home Discovering All rights reserved.</p>
+                    <div class="flex items-center space-x-6 mt-4 md:mt-0">
+                        <span class="text-gray-400 text-sm">Trusted by Home Discovering</span>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-6 h-6 flex items-center justify-center">
+                                <i class="ri-visa-fill text-gray-400"></i>
+                            </div>
+                            <div class="w-6 h-6 flex items-center justify-center">
+                                <i class="ri-paypal-fill text-gray-400"></i>
+                            </div>
+                            <div class="w-6 h-6 flex items-center justify-center">
+                                <i class="ri-mastercard-fill text-gray-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script id="search-functionality">
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInputs = document.querySelectorAll('input[type="text"], input[type="email"]');
+            searchInputs.forEach(input => {
+                input.addEventListener('focus', function () {
+                    this.parentElement.classList.add('ring-2', 'ring-primary', 'ring-opacity-50');
+                });
+                input.addEventListener('blur', function () {
+                    this.parentElement.classList.remove('ring-2', 'ring-primary', 'ring-opacity-50');
+                });
+            });
+        });
+    </script>
+    <script id="smooth-scroll">
+        document.addEventListener('DOMContentLoaded', function () {
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    <script id="mobile-menu">
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = mobileMenuButton.querySelector('i');
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function () {
+                    if (mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.remove('hidden');
+                        menuIcon.className = 'ri-close-line text-gray-700';
+                    } else {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.className = 'ri-menu-line text-gray-700';
+                    }
+                });
+            }
+        });
+    </script>
+    <script id="newsletter-subscription">
+        document.addEventListener('DOMContentLoaded', function () {
+            const subscribeButton = document.querySelector('section.bg-gray-900 button');
+            const emailInput = document.querySelector('section.bg-gray-900 input[type="email"]');
+            if (subscribeButton && emailInput) {
+                subscribeButton.addEventListener('click', function () {
+                    const email = emailInput.value.trim();
+                    if (email && email.includes('@')) {
+                        const notification = document.createElement('div');
+                        notification.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 transform transition-all duration-300';
+                        notification.textContent = 'Thank you for subscribing!';
+                        document.body.appendChild(notification);
+                        setTimeout(() => {
+                            notification.style.transform = 'translateX(400px)';
+                            setTimeout(() => document.body.removeChild(notification), 300);
+                        }, 3000);
+                        emailInput.value = '';
+                    } else {
+                        const notification = document.createElement('div');
+                        notification.className = 'fixed top-4 right-4 bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 transform transition-all duration-300';
+                        notification.textContent = 'Please enter a valid email address.';
+                        document.body.appendChild(notification);
+                        setTimeout(() => {
+                            notification.style.transform = 'translateX(400px)';
+                            setTimeout(() => document.body.removeChild(notification), 300);
+                        }, 3000);
+                    }
+                });
+                emailInput.addEventListener('keypress', function (e) {
+                    if (e.key === 'Enter') {
+                        subscribeButton.click();
+                    }
+                });
+            }
+        });
+    </script>
+    <script id="scroll-animations">
+        document.addEventListener('DOMContentLoaded', function () {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            const animateElements = document.querySelectorAll('.bg-white');
+            animateElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+
+</html>
