@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Hub - Your Ultimate Home & Garden Guide</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#14B8A6',
+                        secondary: '#0F766E'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+   
+</head>
+
+<body class="bg-white">
+    <header class="w-full bg-white shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center space-x-3">
+                    <div
+                        class="w-10 h-10 flex items-center justify-center bg-primary rounded-lg transform hover:scale-110 transition-transform duration-300">
+                        <i class="ri-home-4-fill text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-['Pacifico'] text-2xl text-gray-800">Home Hub</div>
+                        <div class="text-xs text-gray-500 -mt-1 hidden sm:block">Your Ultimate Home Resource</div>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-100">
+                    <div class="max-w-7xl mx-auto sm:px-6">
+                        <nav class="hidden lg:flex items-center space-x-8 h-14">
+                            <a href="/index.html"
+                                class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm border-b-2 border-primary pb-1 transform hover:scale-105">Home</a>
+                            <div class="relative group">
+                                <a href="/home-improvement.html"
+                                    class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-1 transform hover:scale-105">
+                                    <span>Home Improvement</span>
+                                </a>
+                            </div>
+                            <div class="relative group">
+                                <a href="/home-decor.html"
+                                    class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-1 transform hover:scale-105">
+                                    <span>Home Décor</span>
+                            </a>
+                            </div>
+                            <div class="relative group">
+                                <a href="/gardening.html"
+                                    class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-1 transform hover:scale-105">
+                                    <span>Gardening</span>
+                            </a>
+                            </div>
+                            <div class="relative group">
+                                <a href="/cleaning.html"
+                                    class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-1 transform hover:scale-105">
+                                    <span>Cleaning & Organization</span>
+                            </a>
+                            </div>
+                            <div class="relative group">
+                                <a href="/diy-projects.html"
+                                    class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-1 transform hover:scale-105">
+                                    <span>DIY Projects</span>
+                            </a>
+                            </div>
+                            <a href="/about.html"
+                                class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm pb-1 transform hover:scale-105">About</a>
+                            <a href="/real-estate.html"
+                                class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm pb-1 transform hover:scale-105">Real
+                                Estate</a>
+                            <a href="/Blog.html"
+                                class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm pb-1 transform hover:scale-105">Blog</a>
+                                
+                        
+                        
+
+                        </nav>
+                        <button class="lg:hidden flex items-center justify-center w-8 h-8" id="mobile-menu-button">
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="ri-menu-line text-gray-700"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-100 bg-white shadow-lg">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <nav class="py-4 space-y-2">
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium border-l-2 border-primary pl-4">Home</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Home
+                            Improvement</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Home
+                            Décor</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Gardening</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Cleaning
+                            & Organization</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">DIY
+                            Projects</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Real
+                            Estate</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Blog</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Write
+                            for Us</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">About</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+

@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Hub - Your Ultimate Home & Garden Guide</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#14B8A6',
+                        secondary: '#0F766E'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+
+
+</head>
+
+<body class="bg-white">
+    <header class="w-full bg-white shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center space-x-3">
+                    <div
+                        class="w-10 h-10 flex items-center justify-center bg-primary rounded-lg transform hover:scale-110 transition-transform duration-300">
+                        <i class="ri-home-4-fill text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-['Pacifico'] text-2xl text-gray-800">Home Hub</div>
+                        <div class="text-xs text-gray-500 -mt-1 hidden sm:block">Your Ultimate Home Resource</div>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-100">
+                    <div class="max-w-7xl mx-auto sm:px-6">
+                        <nav class="hidden lg:flex items-center space-x-8 h-14">
+                            <a href="/index.html"
+                                class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm border-b-2 border-primary pb-1 transform hover:scale-105">Home</a>
+                            <div class="relative group">
+                                <a href="/home-improvement.html"
+                                    class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-1 transform hover:scale-105">
+                                    <span>Home Improvement</span>
+                                </a>
+                            </div>
+                            <div class="relative group">
+                                <a href="/home-decor.html"
+                                    class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-1 transform hover:scale-105">
+                                    <span>Home Décor</span>
+                                </a>
+                            </div>
+                            <div class="relative group">
+                                <a href="/gardening.html"
+                                    class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-1 transform hover:scale-105">
+                                    <span>Gardening</span>
+                                </a>
+                            </div>
+                            <div class="relative group">
+                                <a href="/cleaning.html"
+                                    class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-1 transform hover:scale-105">
+                                    <span>Cleaning & Organization</span>
+                                </a>
+                            </div>
+                            <div class="relative group">
+                                <a href="/diy-projects.html"
+                                    class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-1 transform hover:scale-105">
+                                    <span>DIY Projects</span>
+                                </a>
+                            </div>
+                            <a href="/about-us.html"
+                                class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm pb-1 transform hover:scale-105">About</a>
+                            <a href="/real-estate.html"
+                                class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm pb-1 transform hover:scale-105">Real
+                                Estate</a>
+                            <a href="/Blog.html"
+                                class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm pb-1 transform hover:scale-105">Blog</a>
+
+
+
+
+                        </nav>
+                        <button class="lg:hidden flex items-center justify-center w-8 h-8" id="mobile-menu-button">
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="ri-menu-line text-gray-700"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-100 bg-white shadow-lg">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <nav class="py-4 space-y-2">
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium border-l-2 border-primary pl-4">Home</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Home
+                            Improvement</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Home
+                            Décor</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Gardening</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Cleaning
+                            & Organization</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">DIY
+                            Projects</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Real
+                            Estate</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Blog</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Write
+                            for Us</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">About</a>
+                        <a href="#"
+                            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative min-h-[500px] md:min-h-[600px] flex items-center justify-center overflow-hidden"
+        style="background-image: url('/images/hero-section-image.webp'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-white">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-up">
+                    Your Ultimate<br>
+                    <span class="text-primary animate-pulse">Home Hub</span>
+                </h1>
+                <p class="text-lg sm:text-xl md:text-2xl mb-8 max-w-2xl mx-auto opacity-90 animate-fade-in-up-delay">
+                    Discover inspiring ideas, expert tips, and beautiful designs to transform your home into the perfect
+                    sanctuary
+                </p>
+                <div class="max-w-md mx-auto animate-fade-in-up-delay-2">
+                    <div
+                        class="flex bg-white rounded-lg p-2 shadow-lg transform hover:scale-105 transition-all duration-300">
+                        <input type="text" id="searchInput" onkeyup="filterItems()"
+                            placeholder="Search for home ideas..."
+                            class="flex-1 px-4 py-2 border-none outline-none text-gray-700 text-sm">
+                        <button
+                            class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-secondary transition-all duration-300 whitespace-nowrap transform hover:scale-110">
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="ri-search-line"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Explore Home Improvement</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Browse through our curated collection of home
+                    improvement ideas and inspiration</p>
+            </div>
+            <div id="blogContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <a href="#">
+                    <div
+                        class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/fix-a-leaky-faucet.webp')">
+                        </div>
+
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                How to Fix a Leaky Faucet Without Calling a Plumber</h3>
+                            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Learn how
+                                to fix a leaky faucet without calling a plumber using simple DIY steps. Save water,
+                                money, and time with this easy home improvement guide.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div
+                        class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/seal-air-leak.webp')">
+                        </div>
+
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                How to Seal Air Leaks Around your Windows and Doors Easily</h3>
+                            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300"> Learn how
+                                to seal air leaks around windows and doors easily. Save energy, improve comfort, and
+                                reduce utility bills with simple DIY sealing tips. </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div
+                        class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/kitchen-remodel.webp')">
+                        </div>
+
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                Budget-Friendly Kitchen Remodel Ideas That Feel Luxurious
+                            </h3>
+                            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Discover
+                                budget-friendly kitchen remodel ideas that look luxurious, boost style, and elevate your
+                                space without spending a fortune.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div
+                        class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/fire-safety-tips.webp')">
+                        </div>
+
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                Essential Fire Safety Tips Every Homeowner Should Always Know</h3>
+                            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Learn
+                                essential fire safety tips every homeowner should always know to protect your family,
+                                property, and home from dangerous fire hazards.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div
+                        class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/weakend-home-projects.webp')">
+                        </div>
+
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                Weekend Home Projects That Instantly Improve Property Value
+                            </h3>
+                            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Explore
+                                easy weekend home projects that instantly improve property value, boost appeal, and make
+                                your home more beautiful and functional.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div
+                        class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/repair-dry-wall.webp')">
+                        </div>
+
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                How to Repair Drywall Cracks: A Simple Step-by-Step Guide</h3>
+                            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Learn how
+                                to repair drywall cracks with this simple step-by-step guide. Fix wall damage easily and
+                                make your walls look smooth and flawless again.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Explore Home Deccor</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Browse through our curated collection of home
+                    improvement ideas and inspiration</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <a href="#">
+                    <div
+                        class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/small-living-room.webp')">
+                        </div>
+
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                How to Make a Small Living Room Look Bigger and Brighter</h3>
+                            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Discover
+                                expert ways to make a small living room look bigger and brighter.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div
+                        class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/bedroom-decor.webp')">
+                        </div>
+
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                Small Bedroom Decor Ideas That Actually Work in your home</h3>
+                            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300"> Discover
+                                small bedroom decor ideas that actually work—maximize space, add style.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div
+                        class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/decorate-a-small-kitchen.webp')">
+                        </div>
+
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                How to Decorate a Small Kitchen Without Losing Space</h3>
+                            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300"> Maximize
+                                space in your kitchen while maintaining a stylish and functional design. </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div
+                        class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/spring-home-decor.webp')">
+                        </div>
+
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                Easy Spring Home Decor Updates for a Fresh Look</h3>
+                            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Revitalize
+                                your home with easy spring home decor updates.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div
+                        class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/diy-wall-art-ideas.webp')">
+                        </div>
+
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                DIY Wall Art Ideas That Look Professionally Made</h3>
+                            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300"> Transform
+                                your walls with DIY wall art ideas that look professionally made.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div
+                        class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/interior-design-style.webp')">
+                        </div>
+
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                How to Find Your Interior Design Style</h3>
+                            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300"> Discover
+                                how to find your interior design style with these expert tips. </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Explore Gardening</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Browse through our curated collection of home
+                    improvement ideas and inspiration</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <a href="#">
+                    <div
+                        class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/first-home-garden.webp')">
+                        </div>
+
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                Gardening for Beginners: How to Start Your First Home Garden</h3>
+                            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Learn how
+                                to start your first home garden with these easy gardening tips for beginners.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div
+                        class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/indoor-plants-alive.webp')">
+                        </div>
+
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                How to Keep Indoor Plants Alive and Thriving</h3>
+                            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300"> Learn how
+                                to keep indoor plants alive and thriving with these expert tips.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div
+                        class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/small-garden-ideas.webp')">
+                        </div>
+
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                Small Garden Ideas for Limited Outdoor Space
+                            </h3>
+                            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Explore
+                                creative and practical small garden ideas for limited outdoor space.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div
+                        class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/spring-gardening-tips.webp')">
+                        </div>
+
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                Spring Gardening Tips for a Healthy Start</h3>
+                            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Get your
+                                garden off to a healthy start with these essential spring gardening tips.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div
+                        class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/control-garden-pets.webp')">
+                        </div>
+
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                How to Control Garden Pests Naturally</h3>
+                            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300"> Learn how
+                                to control garden pests naturally with effective, eco-friendly methods.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div
+                        class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/herb-garden-in-kitchen.webp')">
+                        </div>
+
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                How to Create an Herb Garden in Your Kitchen
+                            </h3>
+                            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Learn how
+                                to create an herb garden in your kitchen with these easy tips.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Featured Articles</h2>
+                <p class="text-lg text-gray-600">Hand-picked content from our expert contributors</p>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Left Side: Featured Image Blog -->
+                    <div
+                        class="filter-item blog-card relative  bg-cover bg-center categories-blog shadow-lg overflow-hidden">
+
+                        <div class="article-image bg-cover bg-center"
+                            style="background-image: url('https://readdy.ai/api/search-image?query=Organized%20home%20office%20with%20desk%2C%20chair%2C%20shelving%20and%20natural%20lighting%2C%20productive%20workspace%20with%20modern%20furniture%20and%20decor%20creating%20inspiring%20work%20environment&width=400&height=300&seq=office&orientation=landscape')">
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                Home Office</h3>
+                            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Build an
+                                inspiring workspace that boosts productivity and creativity</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Side: 4 Blogs -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <article
+                            class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 group">
+                            <div class="h-48 bg-cover bg-center"
+                                style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20bathroom%20with%20clean%20tiles%2C%20elegant%20fixtures%2C%20vanity%20mirror%20and%20contemporary%20design%2C%20spa-like%20atmosphere%20with%20neutral%20colors%20and%20organized%20storage%20solutions&width=400&height=300&seq=bathroom&orientation=landscape');">
+
+                            </div>
+                            <div class="p-4">
+                                <h4
+                                    class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                                    Cozy Living Room Ideas</h4>
+                                <p class="text-gray-600 group-hover:text-gray-800 transition-colors">Transform your
+                                    living room
+                                    into a warm and inviting space.</p>
+                            </div>
+                        </article>
+                        <article
+                            class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 group">
+                            <div class="h-40 bg-cover bg-center"
+                                style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20bathroom%20with%20clean%20tiles%2C%20elegant%20fixtures%2C%20vanity%20mirror%20and%20contemporary%20design%2C%20spa-like%20atmosphere%20with%20neutral%20colors%20and%20organized%20storage%20solutions&width=400&height=300&seq=bathroom&orientation=landscape');">
+
+                            </div>
+
+                            <div class="p-4">
+                                <h4
+                                    class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                                    Modern Kitchen Designs</h4>
+                                <p class="text-gray-600 group-hover:text-gray-800 transition-colors">Discover sleek and
+                                    functional kitchen ideas.</p>
+                            </div>
+                        </article>
+                        <article
+                            class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 group">
+                            <div class="h-40 bg-cover bg-center"
+                                style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20bathroom%20with%20clean%20tiles%2C%20elegant%20fixtures%2C%20vanity%20mirror%20and%20contemporary%20design%2C%20spa-like%20atmosphere%20with%20neutral%20colors%20and%20organized%20storage%20solutions&width=400&height=300&seq=bathroom&orientation=landscape');">
+
+                            </div>
+                            <div class="p-4">
+                                <h4
+                                    class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                                    Garden Landscaping Tips</h4>
+                                <p class="text-gray-600 group-hover:text-gray-800 transition-colors">Create a stunning
+                                    outdoor
+                                    space with these tips.</p>
+                            </div>
+                        </article>
+                        <article
+                            class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 group">
+                            <div class="h-40 bg-cover bg-center"
+                                style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20bathroom%20with%20clean%20tiles%2C%20elegant%20fixtures%2C%20vanity%20mirror%20and%20contemporary%20design%2C%20spa-like%20atmosphere%20with%20neutral%20colors%20and%20organized%20storage%20solutions&width=400&height=300&seq=bathroom&orientation=landscape');">
+
+                            </div>
+                            <div class="p-4">
+                                <h4
+                                    class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                                    Elegant Bedroom Designs</h4>
+                                <p class="text-gray-600 group-hover:text-gray-800 transition-colors">Turn your bedroom
+                                    into a
+                                    luxurious retreat.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="text-center mt-12">
+                <a href="/public/Blog.html"
+                    class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-secondary transition-all duration-300 transform hover:scale-110 whitespace-nowrap shadow-lg hover:shadow-xl">
+                    View All Articles
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Latest Articles</h2>
+                <p class="text-lg text-gray-600">Browse this list of interesting articles and essays on topics like
+                    health, happiness, productivity and more.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+                <article
+                    class="filter-item blog-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+                    <a href="#">
+                        <div
+                            class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+
+                            <div class="h-48 bg-cover bg-center"
+                                style="background-image: url('/images/fix-a-leaky-faucet.webp')">
+                            </div>
+
+                            <div class="p-6">
+                                <h3
+                                    class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                    How to Fix a Leaky Faucet Without Calling a Plumber</h3>
+                                <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Learn
+                                    how to fix a leaky faucet without calling a plumber using simple DIY steps. Save
+                                    water, money, and time with this easy home improvement guide.</p>
+                            </div>
+                        </div>
+                    </a>
+
+
+
+                </article>
+
+
+                <article
+                    class=" filter-item blog-card rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+                    <a href="#">
+                        <div
+                            class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+    
+                            <div class="h-48 bg-cover bg-center"
+                                style="background-image: url('/images/seal-air-leak.webp')">
+                            </div>
+    
+                            <div class="p-6">
+                                <h3
+                                    class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                    How to Seal Air Leaks Around your Windows and Doors Easily</h3>
+                                <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300"> Learn how
+                                    to seal air leaks around windows and doors easily. Save energy, improve comfort, and
+                                    reduce utility bills with simple DIY sealing tips. </p>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <article
+                    class=" filter-item blog-card rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+                    <a href="#">
+                        <div
+                            class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+
+                            <div class="h-48 bg-cover bg-center"
+                                style="background-image: url('/images/kitchen-remodel.webp')">
+                            </div>
+
+                            <div class="p-6">
+                                <h3
+                                    class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                    Budget-Friendly Kitchen Remodel Ideas That Feel Luxurious
+                                </h3>
+                                <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
+                                    Discover budget-friendly kitchen remodel ideas that look luxurious, boost style, and
+                                    elevate your space without spending a fortune.</p>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <article
+                    class=" filter-item blog-card rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+                    <a href="#">
+                        <div
+                            class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+    
+                            <div class="h-48 bg-cover bg-center"
+                                style="background-image: url('/images/small-living-room.webp')">
+                            </div>
+    
+                            <div class="p-6">
+                                <h3
+                                    class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                    How to Make a Small Living Room Look Bigger and Brighter</h3>
+                                <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Discover
+                                    expert ways to make a small living room look bigger and brighter.</p>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <article
+                    class=" filter-item blog-card rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+                    <a href="#">
+                        <div
+                            class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+    
+                            <div class="h-48 bg-cover bg-center"
+                                style="background-image: url('/images/bedroom-decor.webp')">
+                            </div>
+    
+                            <div class="p-6">
+                                <h3
+                                    class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                    Small Bedroom Decor Ideas That Actually Work in your home</h3>
+                                <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300"> Discover
+                                    small bedroom decor ideas that actually work—maximize space, add style.</p>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <article
+                    class=" filter-item blog-card rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+                    <a href="#">
+                        <div
+                            class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+    
+                            <div class="h-48 bg-cover bg-center"
+                                style="background-image: url('/images/decorate-a-small-kitchen.webp')">
+                            </div>
+    
+                            <div class="p-6">
+                                <h3
+                                    class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                    How to Decorate a Small Kitchen Without Losing Space</h3>
+                                <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300"> Maximize
+                                    space in your kitchen while maintaining a stylish and functional design. </p>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <article
+                class="filter-item blog-card rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+                <a href="#">
+                    <div
+                        class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+            
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/spring-gardening-tips.webp')">
+                        </div>
+            
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                Top Gardening Tips for Beginners</h3>
+                            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Learn the best gardening tips for beginners to grow a thriving garden with ease.</p>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            
+            <article
+                class="filter-item blog-card rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+                <a href="#">
+                    <div
+                        class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+            
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/indoor-plants-alive.webp')">
+                        </div>
+            
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                Best Indoor Plants for Your Home</h3>
+                            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Discover the best indoor plants to enhance your home’s beauty and air quality.</p>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            
+            <article
+                class="filter-item blog-card rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+                <a href="#">
+                    <div
+                        class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+            
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/herb-garden-in-kitchen.webp')">
+                        </div>
+            
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                Seasonal Gardening: What to Plant and When</h3>
+                            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Plan your garden with seasonal planting tips to ensure year-round growth and beauty.</p>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            </div>
+
+
+
+
+
+        </div>
+        </div>
+    </section>
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-fade-in-up">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">About Home Hub</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        "Welcome to Home Discovering - Your Ultimate Guide to Home Improvement. At Home Discovering, we
+                        are passionate about transforming homes into beautiful, functional spaces. Whether you're
+                        renovating your entire home or tackling a small DIY project, we provide the expertise and
+                        inspiration you need to create the home of your dreams."
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6">
+                        What started as a small blog sharing DIY tips and design inspiration has grown into a
+                        comprehensive platform trusted by over 50,000 homeowners worldwide. We've helped countless
+                        families transform their houses into homes that reflect their personalities and lifestyles.
+                    </p>
+                    <p class="text-lg text-gray-600">
+                        Today, our team of experts continues to provide practical advice, innovative ideas, and
+                        step-by-step guidance to make home improvement accessible to everyone, regardless of budget or
+                        experience level.
+                    </p>
+                </div>
+                <div class="animate-fade-in-up-delay">
+                    <div class="relative h-96 bg-cover bg-center rounded-xl shadow-lg"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Cozy%20home%20interior%20showcasing%20before%20and%20after%20transformation%20with%20modern%20furniture%2C%20warm%20lighting%2C%20plants%20and%20personal%20touches%20creating%20a%20welcoming%20family%20living%20space%20with%20natural%20materials%20and%20contemporary%20design%20elements&width=600&height=400&seq=story&orientation=landscape')">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-12 md:py-16 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 animate-fade-in-up">Stay Updated with Home Tips</h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-8 animate-fade-in-up-delay">Get the latest home improvement
+                ideas, seasonal tips, and exclusive content delivered to your inbox</p>
+            <div class="max-w-md mx-auto animate-fade-in-up-delay-2">
+                <form id="emailForm">
+                    <div
+                        class="flex flex-col sm:flex-row bg-white rounded-lg p-2 transform hover:scale-105 transition-transform duration-300">
+                        <input type="email" id="user_email" name="user_email" placeholder="Enter your email address"
+                            class="flex-1 px-4 py-2 mb-2 sm:mb-0 border-none outline-none text-gray-700 text-sm">
+                        <button type="submit"
+                            class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-secondary transition-all duration-300 transform hover:scale-110 whitespace-nowrap">
+                            Subscribe
+                        </button>
+
+                    </div>
+                    <div id="message"></div>
+                </form>
+            </div>
+            <p class="text-sm text-gray-400 mt-4">Join over 50,000 homeowners who trust our weekly newsletter
+            </p>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-1">
+                    <div class="flex items-center space-x-3">
+                        <div
+                            class="w-10 h-10 flex items-center justify-center bg-primary rounded-lg transform hover:scale-110 transition-transform duration-300">
+                            <i class="ri-home-4-fill text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <div class="font-['Pacifico'] text-2xl text-gray-800 text-white">Home Hub</div>
+                            <div class="text-xs text-gray-500 -mt-1 hidden sm:block text-white">Your Ultimate Home
+                                Resource</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6 mt-4">Your ultimate destination for home improvement inspiration,
+                        expert
+                        tips, and beautiful design ideas.</p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+                            <img width="15px" src="/images/whatsapp.png" alt="whatsapp icon">
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Categories</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/home-improvement.html"
+                                class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Home
+                                Improvement</a></li>
+                        <li><a href="#"
+                                class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Gardening</a>
+                        </li>
+                        <li><a href="/home-decor.html"
+                                class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Home
+                                Decor</a></li>
+                        <li><a href="/cleaning.html"
+                                class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Cleaning
+                                and Organization</a></li>
+                        <li><a href="/real-estate.html"
+                                class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Real
+                                Estate</a></li>
+                        <li><a href="diy-projects.html"
+                                class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">DIY
+                                Projects</a></li>
+                        <li><a href="/Blog.html"
+                                class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/about-us.html"
+                                class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">About
+                                Us</a></li>
+                        <li><a href="/contact.html"
+                                class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Contact
+                                Us</a></li>
+                        <li><a href=".write-for-us.html"
+                                class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Write
+                                for Us</a></li>
+                        <li><a href="/privacy.html"
+                                class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Privacy
+                                Policy</a></li>
+                        <li><a href="/terms.html"
+                                class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Terms
+                                of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-center items-center">
+                    <p class="text-gray-400 text-sm">© 2025 Home Discovering All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script id="search-functionality">
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInputs = document.querySelectorAll('input[type="text"], input[type="email"]');
+            searchInputs.forEach(input => {
+                input.addEventListener('focus', function () {
+                    this.parentElement.classList.add('ring-2', 'ring-primary', 'ring-opacity-50');
+                });
+                input.addEventListener('blur', function () {
+                    this.parentElement.classList.remove('ring-2', 'ring-primary', 'ring-opacity-50');
+                });
+            });
+        });
+    </script>
+    <script id="smooth-scroll">
+        document.addEventListener('DOMContentLoaded', function () {
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    <script id="mobile-menu">
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = mobileMenuButton.querySelector('i');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function () {
+                    if (mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.remove('hidden');
+                        menuIcon.className = 'ri-close-line text-gray-700';
+                    } else {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.className = 'ri-menu-line text-gray-700';
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        function filterItems() {
+            // 1. Input field aur List items ko get karein
+            let input = document.getElementById("searchInput");
+            let filter = input.value.toLowerCase(); // Input ko lowercase mein convert karein
+            let items = document.getElementsByClassName("filter-item"); // Saare items ko get karein
+
+            // 2. Har item ko loop karein
+            for (let i = 0; i < items.length; i++) {
+                let item = items[i];
+
+                // Item ka poora text content lein (h2 aur p ka text bhi)
+                let textContent = item.textContent || item.innerText;
+
+                // 3. Check karein ke text mein filter keyword hai ya nahi
+                if (textContent.toLowerCase().indexOf(filter) > -1) {
+                    // Agar keyword mil jaye, to item ko dikhayein
+                    item.style.display = "";
+                    // Note: display="" wahi display property use karta hai jo pehle thi (jese block ya flex)
+                } else {
+                    // Agar keyword na mile, to item ko chhupa dein
+                    item.style.display = "none";
+                }
+            }
+        }
+    </script>
+    <script>
+        document.getElementById('emailForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Default form submission rokna
+
+            const emailInput = document.getElementById('user_email');
+            const userEmail = emailInput.value;
+            const messageDiv = document.getElementById('message');
+
+            // Message area ko clear karna
+            messageDiv.textContent = 'Submitting...';
+            messageDiv.className = '';
+
+            // Data ko server (Node.js endpoint) par bhejna
+            fetch('/submit-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ user_email: userEmail }), // Data ko JSON format mein bhejna
+            })
+                .then(response => response.json()) // Server response ko JSON mein convert karna
+                .then(data => {
+                    if (data.success) {
+                        // Agar server ne success response diya
+                        messageDiv.textContent = data.message;
+                        messageDiv.className = 'success';
+                        emailInput.value = ''; // Input field clear karna
+                    } else {
+                        // Agar server ne error response diya
+                        messageDiv.textContent = data.message;
+                        messageDiv.className = 'error';
+                    }
+                })
+                .catch(error => {
+                    // Agar network ya fetch mein koi error aayi
+                    console.error('Network Error:', error);
+                    messageDiv.textContent = 'Submission failed due to a network error.';
+                    messageDiv.className = 'error';
+                });
+        });
+    </script>
+
+
+</body>
+
+</html>
