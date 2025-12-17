@@ -113,28 +113,28 @@
             <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-100 bg-white shadow-lg">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <nav class="py-4 space-y-2">
-                        <a href="#"
+                        <a href="index.html"
                             class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium border-l-2 border-primary pl-4">Home</a>
-                        <a href="#"
+                        <a href="home-improvement.html"
                             class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Home
                             Improvement</a>
-                        <a href="#"
+                        <a href="home-decor.html"
                             class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Home
                             Décor</a>
                         <a href="#"
                             class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Gardening</a>
-                        <a href="#"
+                        <a href="cleaning.html"
                             class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Cleaning
                             & Organization</a>
-                        <a href="#"
+                        <a href="diy-projects.html"
                             class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">DIY
                             Projects</a>
-                        <a href="#"
+                        <a href="real-estate.html"
                             class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Real
                             Estate</a>
                         <a href="#"
                             class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Blog</a>
-                        <a href="#"
+                        <a href="contact.html#write-for-us"
                             class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Write
                             for Us</a>
                         <a href="#"
@@ -299,25 +299,25 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Categories</h3>
                     <ul class="space-y-2">
-                        <li><a href="/home-improvement.html"
+                        <li><a href="home-improvement.html"
                                 class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Home
                                 Improvement</a></li>
-                        <li><a href="#"
+                        <li><a href="gardening.html"
                                 class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Gardening</a>
                         </li>
-                        <li><a href="/home-decor.html"
+                        <li><a href="home-decor.html"
                                 class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Home
                                 Decor</a></li>
-                        <li><a href="/cleaning.html"
+                        <li><a href="cleaning.html"
                                 class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Cleaning
                                 and Organization</a></li>
-                        <li><a href="/real-estate.html"
+                        <li><a href="real-estate.html"
                                 class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Real
                                 Estate</a></li>
                         <li><a href="diy-projects.html"
                                 class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">DIY
                                 Projects</a></li>
-                        <li><a href="/Blog.html"
+                        <li><a href="Blog.html"
                                 class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Blog</a>
                         </li>
                     </ul>
@@ -326,19 +326,19 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Company</h3>
                     <ul class="space-y-2">
-                        <li><a href="/about-us.html"
+                        <li><a href="about-us.html"
                                 class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">About
                                 Us</a></li>
-                        <li><a href="/contact.html"
+                        <li><a href="contact.html"
                                 class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Contact
                                 Us</a></li>
-                        <li><a href=".write-for-us.html"
+                        <li><a href="contact.html#write-for-us"
                                 class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Write
                                 for Us</a></li>
-                        <li><a href="/privacy.html"
+                        <li><a href="privacy.html"
                                 class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Privacy
                                 Policy</a></li>
-                        <li><a href="/terms.html"
+                        <li><a href="terms.html"
                                 class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Terms
                                 of Service</a></li>
                     </ul>
@@ -351,3 +351,23 @@
             </div>
         </div>
     </footer>
+
+    <script id="mobile-menu">
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = mobileMenuButton.querySelector('i');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function () {
+                    if (mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.remove('hidden');
+                        menuIcon.className = 'ri-close-line text-gray-700';
+                    } else {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.className = 'ri-menu-line text-gray-700';
+                    }
+                });
+            }
+        });
+    </script>

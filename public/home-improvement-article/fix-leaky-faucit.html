@@ -35,66 +35,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
-    <style>
-        :where([class^="ri-"])::before {
-            content: "\f3c2";
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-fade-in-up {
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .animate-fade-in-up-delay {
-            animation: fadeInUp 1s ease-out 0.3s both;
-        }
-
-        .animate-fade-in-up-delay-2 {
-            animation: fadeInUp 1s ease-out 0.6s both;
-        }
-
-        @keyframes pulse {
-
-            0%,
-            100% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0.5;
-            }
-        }
-
-        .animate-pulse {
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-
-        .group:hover .group-hover\:text-primary {
-            color: #14B8A6;
-        }
-
-        .group:hover .group-hover\:text-gray-800 {
-            color: #1f2937;
-        }
-
-        @media (max-width: 768px) {
-            .hero-text {
-                font-size: 2rem;
-                line-height: 1.2;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
 </head>
 
 <body class="bg-white">
@@ -111,134 +53,88 @@
                         <div class="text-xs text-gray-500 -mt-1 hidden sm:block">Your Ultimate Home Resource</div>
                     </div>
                 </div>
-                <div class="flex-1 max-w-md mx-4 sm:mx-8 hidden md:block">
-                    <div class="relative">
-                        <input type="text" placeholder="Search articles, tips, and guides..."
-                            class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 pl-10 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300">
-                        <div
-                            class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 flex items-center justify-center">
-                            <i class="ri-search-line text-gray-500 text-sm"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="hidden lg:flex items-center space-x-6">
-                    <div
-                        class="flex items-center space-x-1 text-sm text-gray-600 transform hover:scale-105 transition-transform duration-300">
-                        <div class="w-4 h-4 flex items-center justify-center">
-                            <i class="ri-user-line text-primary"></i>
-                        </div>
-                        <span>50K+ Readers</span>
-                    </div>
-                    <div
-                        class="flex items-center space-x-1 text-sm text-gray-600 transform hover:scale-105 transition-transform duration-300">
-                        <div class="w-4 h-4 flex items-center justify-center">
-                            <i class="ri-article-line text-primary"></i>
-                        </div>
-                        <span>1000+ Articles</span>
+
+                <div class="border-t border-gray-100">
+                    <div class="max-w-7xl mx-auto sm:px-6">
+                        <nav class="hidden lg:flex items-center space-x-8 h-14">
+                            <a href="/index.html"
+                                class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm border-b-2 border-primary pb-1 transform hover:scale-105">Home</a>
+                            <div class="relative group">
+                                <a href="/home-improvement.html"
+                                    class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-1 transform hover:scale-105">
+                                    <span>Home Improvement</span>
+                                </a>
+                            </div>
+                            <div class="relative group">
+                                <a href="/home-decor.html"
+                                    class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-1 transform hover:scale-105">
+                                    <span>Home Décor</span>
+                                </a>
+                            </div>
+                            <div class="relative group">
+                                <a href="/gardening.html"
+                                    class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-1 transform hover:scale-105">
+                                    <span>Gardening</span>
+                                </a>
+                            </div>
+                            <div class="relative group">
+                                <a href="/cleaning.html"
+                                    class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-1 transform hover:scale-105">
+                                    <span>Cleaning & Organization</span>
+                                </a>
+                            </div>
+                            <div class="relative group">
+                                <a href="/diy-projects.html"
+                                    class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-1 transform hover:scale-105">
+                                    <span>DIY Projects</span>
+                                </a>
+                            </div>
+                            <a href="/about-us.html"
+                                class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm pb-1 transform hover:scale-105">About</a>
+                            <a href="/real-estate.html"
+                                class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm pb-1 transform hover:scale-105">Real
+                                Estate</a>
+                            <a href="/Blog.html"
+                                class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm pb-1 transform hover:scale-105">Blog</a>
+
+
+
+
+                        </nav>
+                        <button class="lg:hidden flex items-center justify-center w-8 h-8" id="mobile-menu-button">
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="ri-menu-line text-gray-700"></i>
+                            </div>
+                        </button>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-gray-100">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav class="hidden lg:flex items-center space-x-8 h-14">
-                        <a href="#"
-                            class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm border-b-2 border-primary pb-4 transform hover:scale-105">Home</a>
-                        <div class="relative group">
-                            <button
-                                class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-4 transform hover:scale-105">
-                                <span>Home Improvement</span>
-                                <div class="w-3 h-3 flex items-center justify-center">
-                                    <i
-                                        class="ri-arrow-down-s-line text-xs transform group-hover:rotate-180 transition-transform duration-300"></i>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="relative group">
-                            <button
-                                class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-4 transform hover:scale-105">
-                                <span>Home Décor</span>
-                                <div class="w-3 h-3 flex items-center justify-center">
-                                    <i
-                                        class="ri-arrow-down-s-line text-xs transform group-hover:rotate-180 transition-transform duration-300"></i>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="relative group">
-                            <button
-                                class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-4 transform hover:scale-105">
-                                <span>Gardening</span>
-                                <div class="w-3 h-3 flex items-center justify-center">
-                                    <i
-                                        class="ri-arrow-down-s-line text-xs transform group-hover:rotate-180 transition-transform duration-300"></i>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="relative group">
-                            <button
-                                class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-4 transform hover:scale-105">
-                                <span>Cleaning & Organization</span>
-                                <div class="w-3 h-3 flex items-center justify-center">
-                                    <i
-                                        class="ri-arrow-down-s-line text-xs transform group-hover:rotate-180 transition-transform duration-300"></i>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="relative group">
-                            <button
-                                class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-4 transform hover:scale-105">
-                                <span>DIY Projects</span>
-                                <div class="w-3 h-3 flex items-center justify-center">
-                                    <i
-                                        class="ri-arrow-down-s-line text-xs transform group-hover:rotate-180 transition-transform duration-300"></i>
-                                </div>
-                            </button>
-                        </div>
-                        <a href="#"
-                            class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm pb-4 transform hover:scale-105">Real
-                            Estate</a>
-                        <a href="#"
-                            class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm pb-4 transform hover:scale-105">Blog</a>
-                        <a href="#"
-                            class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm pb-4 transform hover:scale-105">Write
-                            for Us</a>
-                        <a href="#"
-                            class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm pb-4 transform hover:scale-105">About</a>
-                        <a href="#"
-                            class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm pb-4 transform hover:scale-105">Contact</a>
-                    </nav>
-                    <button class="lg:hidden flex items-center justify-center w-8 h-8" id="mobile-menu-button">
-                        <div class="w-5 h-5 flex items-center justify-center">
-                            <i class="ri-menu-line text-gray-700"></i>
-                        </div>
-                    </button>
-                    </nav>
-                </div>
-            </div>
+
             <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-100 bg-white shadow-lg">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <nav class="py-4 space-y-2">
-                        <a href="#"
+                        <a href="index.html"
                             class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium border-l-2 border-primary pl-4">Home</a>
-                        <a href="#"
+                        <a href="home-improvement.html"
                             class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Home
                             Improvement</a>
-                        <a href="#"
+                        <a href="home-decor.html"
                             class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Home
                             Décor</a>
                         <a href="#"
                             class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Gardening</a>
-                        <a href="#"
+                        <a href="cleaning.html"
                             class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Cleaning
                             & Organization</a>
-                        <a href="#"
+                        <a href="diy-projects.html"
                             class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">DIY
                             Projects</a>
-                        <a href="#"
+                        <a href="real-estate.html"
                             class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Real
                             Estate</a>
                         <a href="#"
                             class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Blog</a>
-                        <a href="#"
+                        <a href="contact.html#write-for-us"
                             class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Write
                             for Us</a>
                         <a href="#"
@@ -250,9 +146,7 @@
             </div>
         </div>
     </header>
-    </div>
-    </div>
-    </header>
+
     <main class="py-8 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">

@@ -68,36 +68,36 @@
                                 <a href="/home-decor.html"
                                     class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-1 transform hover:scale-105">
                                     <span>Home Décor</span>
-                            </a>
+                                </a>
                             </div>
                             <div class="relative group">
                                 <a href="/gardening.html"
                                     class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-1 transform hover:scale-105">
                                     <span>Gardening</span>
-                            </a>
+                                </a>
                             </div>
                             <div class="relative group">
                                 <a href="/cleaning.html"
                                     class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-1 transform hover:scale-105">
                                     <span>Cleaning & Organization</span>
-                            </a>
+                                </a>
                             </div>
                             <div class="relative group">
                                 <a href="/diy-projects.html"
                                     class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm flex items-center space-x-1 pb-1 transform hover:scale-105">
                                     <span>DIY Projects</span>
-                            </a>
+                                </a>
                             </div>
-                            <a href="/about.html"
+                            <a href="/about-us.html"
                                 class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm pb-1 transform hover:scale-105">About</a>
                             <a href="/real-estate.html"
                                 class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm pb-1 transform hover:scale-105">Real
                                 Estate</a>
                             <a href="/Blog.html"
                                 class="text-gray-700 hover:text-primary transition-all duration-300 font-medium text-sm pb-1 transform hover:scale-105">Blog</a>
-                                
-                        
-                        
+
+
+
 
                         </nav>
                         <button class="lg:hidden flex items-center justify-center w-8 h-8" id="mobile-menu-button">
@@ -112,28 +112,28 @@
             <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-100 bg-white shadow-lg">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <nav class="py-4 space-y-2">
-                        <a href="#"
+                        <a href="index.html"
                             class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium border-l-2 border-primary pl-4">Home</a>
-                        <a href="#"
+                        <a href="home-improvement.html"
                             class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Home
                             Improvement</a>
-                        <a href="#"
+                        <a href="home-decor.html"
                             class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Home
                             Décor</a>
                         <a href="#"
                             class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Gardening</a>
-                        <a href="#"
+                        <a href="cleaning.html"
                             class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Cleaning
                             & Organization</a>
-                        <a href="#"
+                        <a href="diy-projects.html"
                             class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">DIY
                             Projects</a>
-                        <a href="#"
+                        <a href="real-estate.html"
                             class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Real
                             Estate</a>
                         <a href="#"
                             class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Blog</a>
-                        <a href="#"
+                        <a href="contact.html#write-for-us"
                             class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium pl-4">Write
                             for Us</a>
                         <a href="#"
@@ -302,17 +302,22 @@
             <p class="text-lg md:text-xl text-gray-300 mb-8 animate-fade-in-up-delay">Get the latest home improvement
                 ideas, seasonal tips, and exclusive content delivered to your inbox</p>
             <div class="max-w-md mx-auto animate-fade-in-up-delay-2">
-                <div
-                    class="flex flex-col sm:flex-row bg-white rounded-lg p-2 transform hover:scale-105 transition-transform duration-300">
-                    <input type="email" placeholder="Enter your email address"
-                        class="flex-1 px-4 py-2 mb-2 sm:mb-0 border-none outline-none text-gray-700 text-sm">
-                    <button
-                        class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-secondary transition-all duration-300 transform hover:scale-110 whitespace-nowrap">
-                        Subscribe
-                    </button>
-                </div>
+                <form id="emailForm">
+                    <div
+                        class="flex flex-col sm:flex-row bg-white rounded-lg p-2 transform hover:scale-105 transition-transform duration-300">
+                        <input type="email" id="user_email" name="user_email" placeholder="Enter your email address"
+                            class="flex-1 px-4 py-2 mb-2 sm:mb-0 border-none outline-none text-gray-700 text-sm">
+                        <button type="submit"
+                            class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-secondary transition-all duration-300 transform hover:scale-110 whitespace-nowrap">
+                            Subscribe
+                        </button>
+
+                    </div>
+                    <div id="message"></div>
+                </form>
             </div>
-            <p class="text-sm text-gray-400 mt-4">Join over 50,000 homeowners who trust our weekly newsletter</p>
+            <p class="text-sm text-gray-400 mt-4">Join over 50,000 homeowners who trust our weekly newsletter
+            </p>
         </div>
     </section>
     <footer class="bg-gray-900 text-white py-16">
@@ -351,25 +356,25 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Categories</h3>
                     <ul class="space-y-2">
-                        <li><a href="/home-improvement.html"
+                        <li><a href="home-improvement.html"
                                 class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Home
                                 Improvement</a></li>
-                        <li><a href="#"
+                        <li><a href="gardening.html"
                                 class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Gardening</a>
                         </li>
-                        <li><a href="/home-decor.html"
+                        <li><a href="home-decor.html"
                                 class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Home
                                 Decor</a></li>
-                        <li><a href="/cleaning.html"
+                        <li><a href="cleaning.html"
                                 class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Cleaning
                                 and Organization</a></li>
-                        <li><a href="/real-estate.html"
+                        <li><a href="real-estate.html"
                                 class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Real
                                 Estate</a></li>
                         <li><a href="diy-projects.html"
                                 class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">DIY
                                 Projects</a></li>
-                        <li><a href="/Blog.html"
+                        <li><a href="Blog.html"
                                 class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Blog</a>
                         </li>
                     </ul>
@@ -378,19 +383,19 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Company</h3>
                     <ul class="space-y-2">
-                        <li><a href="/about-us.html"
+                        <li><a href="about-us.html"
                                 class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">About
                                 Us</a></li>
-                        <li><a href="/contact.html"
+                        <li><a href="contact.html"
                                 class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Contact
                                 Us</a></li>
-                        <li><a href=".write-for-us.html"
+                        <li><a href="contact.html#write-for-us"
                                 class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Write
                                 for Us</a></li>
-                        <li><a href="/privacy.html"
+                        <li><a href="privacy.html"
                                 class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Privacy
                                 Policy</a></li>
-                        <li><a href="/terms.html"
+                        <li><a href="terms.html"
                                 class="text-gray-300 hover:text-primary transition-all duration-300 transform hover:translate-x-2">Terms
                                 of Service</a></li>
                     </ul>
@@ -451,42 +456,47 @@
             }
         });
     </script>
-    <script id="newsletter-subscription">
-        document.addEventListener('DOMContentLoaded', function () {
-            const subscribeButton = document.querySelector('section.bg-gray-900 button');
-            const emailInput = document.querySelector('section.bg-gray-900 input[type="email"]');
-            if (subscribeButton && emailInput) {
-                subscribeButton.addEventListener('click', function () {
-                    const email = emailInput.value.trim();
-                    if (email && email.includes('@')) {
-                        const notification = document.createElement('div');
-                        notification.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 transform transition-all duration-300';
-                        notification.textContent = 'Thank you for subscribing!';
-                        document.body.appendChild(notification);
-                        setTimeout(() => {
-                            notification.style.transform = 'translateX(400px)';
-                            setTimeout(() => document.body.removeChild(notification), 300);
-                        }, 3000);
-                        emailInput.value = '';
-                    } else {
-                        const notification = document.createElement('div');
-                        notification.className = 'fixed top-4 right-4 bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 transform transition-all duration-300';
-                        notification.textContent = 'Please enter a valid email address.';
-                        document.body.appendChild(notification);
-                        setTimeout(() => {
-                            notification.style.transform = 'translateX(400px)';
-                            setTimeout(() => document.body.removeChild(notification), 300);
-                        }, 3000);
-                    }
-                });
-                emailInput.addEventListener('keypress', function (e) {
-                    if (e.key === 'Enter') {
-                        subscribeButton.click();
-                    }
-                });
-            }
-        });
-    </script>
+   <script>
+    document.getElementById('emailForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Default form submission rokna
+
+        const emailInput = document.getElementById('user_email');
+        const userEmail = emailInput.value;
+        const messageDiv = document.getElementById('message');
+
+        // Message area ko clear karna
+        messageDiv.textContent = 'Submitting...';
+        messageDiv.className = '';
+
+        // Data ko server (Node.js endpoint) par bhejna
+        fetch('/submit-email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ user_email: userEmail }), // Data ko JSON format mein bhejna
+        })
+            .then(response => response.json()) // Server response ko JSON mein convert karna
+            .then(data => {
+                if (data.success) {
+                    // Agar server ne success response diya
+                    messageDiv.textContent = data.message;
+                    messageDiv.className = 'success';
+                    emailInput.value = ''; // Input field clear karna
+                } else {
+                    // Agar server ne error response diya
+                    messageDiv.textContent = data.message;
+                    messageDiv.className = 'error';
+                }
+            })
+            .catch(error => {
+                // Agar network ya fetch mein koi error aayi
+                console.error('Network Error:', error);
+                messageDiv.textContent = 'Submission failed due to a network error.';
+                messageDiv.className = 'error';
+            });
+    });
+</script>
     <script id="scroll-animations">
         document.addEventListener('DOMContentLoaded', function () {
             const observerOptions = {
