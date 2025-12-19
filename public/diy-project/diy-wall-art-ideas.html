@@ -260,24 +260,7 @@
             });
         });
     </script>
-    <script id="mobile-menu">
-        document.addEventListener("DOMContentLoaded", function () {
-            const mobileMenuButton = document.getElementById("mobile-menu-button");
-            const mobileMenu = document.getElementById("mobile-menu");
-            const menuIcon = mobileMenuButton.querySelector("i");
-            if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener("click", function () {
-                    if (mobileMenu.classList.contains("hidden")) {
-                        mobileMenu.classList.remove("hidden");
-                        menuIcon.className = "ri-close-line text-gray-700";
-                    } else {
-                        mobileMenu.classList.add("hidden");
-                        menuIcon.className = "ri-menu-line text-gray-700";
-                    }
-                });
-            }
-        });
-    </script>
+   
     <script>
         document.getElementById('emailForm').addEventListener('submit', function (event) {
             event.preventDefault(); // Default form submission rokna
