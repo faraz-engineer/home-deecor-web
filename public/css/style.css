@@ -73,6 +73,12 @@ header {
 .group:hover .group-hover\:text-gray-800 {
     color: #1f2937;
 }
+.mobile-menu {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: white;
+}
 
 @media (max-width: 768px) {
     .hero-text {
