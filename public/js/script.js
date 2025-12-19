@@ -1,4 +1,3 @@
-// 1. Function jo Header aur Footer ko load karega
 async function includeHTML() {
     const components = [
         { id: 'header-placeholder', file: '/components/header.html' },
@@ -10,39 +9,50 @@ async function includeHTML() {
         if (element) {
             try {
                 const response = await fetch(comp.file);
-                if (!response.ok) throw new Error("File nahi mili");
                 const content = await response.text();
                 element.innerHTML = content;
-            } catch (err) {
-                console.error("Error loading component:", err);
-            }
+            } catch (err) { console.error("Error:", err); }
         }
     }
 
-    // Header load hone ke FORAN BAAD mobile menu ko activate karein
+    // 1. Mobile Menu Activate Karein
     setupMobileMenu();
+    // 2. Sahi Link ko Highlight Karein (Active State)
+    setActiveNavLink();
 }
 
-// 2. Mobile Menu ki Logic
 function setupMobileMenu() {
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    if (mobileMenuButton && mobileMenu) {
-        const menuIcon = mobileMenuButton.querySelector('i');
-
-        // Click event listener
-        mobileMenuButton.onclick = function () {
-            if (mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.remove('hidden');
-                menuIcon.className = 'ri-close-line text-gray-700'; // Close icon
-            } else {
-                mobileMenu.classList.add('hidden');
-                menuIcon.className = 'ri-menu-line text-gray-700'; // Burger icon
-            }
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+        const icon = btn.querySelector('i');
+        btn.onclick = () => {
+            const isHidden = menu.classList.toggle('hidden');
+            icon.className = isHidden ? 'ri-menu-line text-gray-700 text-xl' : 'ri-close-line text-gray-700 text-xl';
         };
     }
 }
 
-// 3. Screen load hote hi sab shuru karein
+function setActiveNavLink() {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-link');
+    const mobileLinks = document.querySelectorAll('.nav-link-mobile');
+
+    navLinks.forEach(link => {
+        // Purani active classes hatao
+        link.classList.remove('border-b-2', 'border-primary', 'text-primary');
+        
+        // Agar link ka path current path se match kare
+        if (link.getAttribute('href') === currentPath || (currentPath === '/' && link.getAttribute('href') === '/index.html')) {
+            link.classList.add('border-b-2', 'border-primary', 'text-primary');
+        }
+    });
+
+    mobileLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+            link.classList.add('border-l-4', 'border-primary', 'bg-gray-50', 'text-primary');
+        }
+    });
+}
+
 window.onload = includeHTML;
