@@ -12,6 +12,11 @@ header {
 .icon-images {
     width: 15px;
 }
+.home-link {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
 .home-image {
     position: absolute;
 }
