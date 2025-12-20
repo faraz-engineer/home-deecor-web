@@ -43,36 +43,36 @@
 <body class="bg-white">
     <div id="header-placeholder"></div>
 
-    <section class="relative min-h-[500px] md:min-h-[600px] flex items-center justify-center overflow-hidden"
-        style="background-image: url('/images/hero-section-image.webp'); background-size: cover; background-position: center; z-index: -111;">
-        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
-        <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center text-white">
-                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-up">
-                    Your Ultimate<br>
-                    <span class="text-primary animate-pulse">Home Hub</span>
-                </h1>
-                <p class="text-lg sm:text-xl md:text-2xl mb-8 max-w-2xl mx-auto opacity-90 animate-fade-in-up-delay">
-                    Discover inspiring ideas, expert tips, and beautiful designs to transform your home into the perfect
-                    sanctuary
-                </p>
-                <div class="max-w-md mx-auto animate-fade-in-up-delay-2">
-                    <div
-                        class="flex bg-white rounded-lg p-2 shadow-lg transform hover:scale-105 transition-all duration-300">
-                        <input type="text" id="searchInput" onkeyup="filterItems()"
-                            placeholder="Search for home ideas..."
-                            class="flex-1 px-4 py-2 border-none outline-none text-gray-700 text-sm">
-                        <button
-                            class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-secondary transition-all duration-300 whitespace-nowrap transform hover:scale-110">
-                            <div class="w-5 h-5 flex items-center justify-center">
-                                <i class="ri-search-line"></i>
-                            </div>
-                        </button>
-                    </div>
+    <section class="relative min-h-[500px] md:min-h-[600px] flex items-center justify-center overflow-hidden z-0"
+    style="background-image: url('/images/hero-section-image.webp'); background-size: cover; background-position: center;">
+    
+    <div class="absolute inset-0 bg-black/30 z-0"></div>
+
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center text-white">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-up">
+                Your Ultimate<br>
+                <span class="text-primary animate-pulse">Home Hub</span>
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl mb-8 max-w-2xl mx-auto opacity-90 animate-fade-in-up-delay">
+                Discover inspiring ideas, expert tips, and beautiful designs to transform your home into the perfect sanctuary
+            </p>
+            
+            <div class="max-w-md mx-auto animate-fade-in-up-delay-2">
+                <div class="flex bg-white rounded-lg p-2 shadow-lg transform hover:scale-105 transition-all duration-300">
+                    <input type="text" id="searchInput" onkeyup="filterItems()"
+                        placeholder="Search for home ideas..."
+                        class="flex-1 px-4 py-2 border-none outline-none text-gray-700 text-sm">
+                    <button class="bg-primary text-white px-6 py-2 rounded-lg font-medium hover:bg-secondary transition-all duration-300 transform hover:scale-110">
+                        <div class="w-5 h-5 flex items-center justify-center">
+                            <i class="ri-search-line"></i>
+                        </div>
+                    </button>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
     <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
