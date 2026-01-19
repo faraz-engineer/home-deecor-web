@@ -11,21 +11,12 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// ** YEH LINE ZAROORI HAI **
-app.use(express.static('public')); 
-// ...
-
-// Middleware setup
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-
-// Static files (HTML) ko serve karne ke liye
-app.use(express.static('public')); 
+// Serve static files from 'public' directory
+app.use(express.static('public'));
 
 // 1. Nodemailer Transporter Setup
 // Yeh woh configuration hai jo batati hai ki email kahan se bhejna hai.
 // HUM GMAIL KA USE KAR RAHE HAIN.
-// 1. DAKAYA (Sender Settings)
 // 1. Nodemailer Transporter Setup
 const transporter = nodemailer.createTransport({
     // Ab hum service: 'gmail' ki jagah host aur port use karenge
@@ -40,18 +31,18 @@ const transporter = nodemailer.createTransport({
 
 // ... baaki sara code same rahega.
 app.post('/submit-email', (req, res) => {
-    const userEmail = req.body.user_email; 
+    const userEmail = req.body.user_email;
 
     const mailOptions = {
         // GOR SE DEKHEIN: From mein bhi Zafar wali email hi honi chahiye!
-        from: 'zafarshahzad275@gmail.com', 
-        
+        from: 'zafarshahzad275@gmail.com',
+
         // Jisko milni chahiye (Aapki main email)
-        to: 'me.farazzafar@gmail.com', 
-        
+        to: 'me.farazzafar@gmail.com',
+
         // Reply-To mein User ki email dalenge taaki aap reply kar sakein
         replyTo: userEmail,
-        
+
         subject: `New Form Submission: ${userEmail}`,
         html: `
             <h3>New User Submission</h3>
@@ -60,7 +51,7 @@ app.post('/submit-email', (req, res) => {
         `
     };
 
-   
+
     // 3. Email bhejne ka kaam
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
