@@ -3,8 +3,7 @@ const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 3000;
-// server.js ke shuru mein
-// ...
+
 
 
 // Middleware setup
@@ -29,7 +28,6 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-// ... baaki sara code same rahega.
 app.post('/submit-email', (req, res) => {
     const userEmail = req.body.user_email;
 
