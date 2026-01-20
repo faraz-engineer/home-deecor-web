@@ -10,6 +10,24 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+// Middleware to handle clean URLs (without .html extension)
+app.use((req, res, next) => {
+    // Skip if it's a file with extension, API route, or root
+    if (req.path.includes('.') || req.path.startsWith('/submit-') || req.path === '/') {
+        return next();
+    }
+
+    // Try to serve the HTML file
+    const fs = require('fs');
+    const path = require('path');
+    const htmlPath = path.join(__dirname, 'public', req.path + '.html');
+
+    if (fs.existsSync(htmlPath)) {
+        return res.sendFile(htmlPath);
+    }
+    next();
+});
+
 // Serve static files from 'public' directory
 app.use(express.static('public'));
 
