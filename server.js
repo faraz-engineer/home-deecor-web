@@ -13,6 +13,11 @@ app.use(bodyParser.json());
 // Serve static files from 'public' directory
 app.use(express.static('public'));
 
+// Explicit root route for testing
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/public/index.html');
+});
+
 // 1. Nodemailer Transporter Setup
 // Yeh woh configuration hai jo batati hai ki email kahan se bhejna hai.
 // HUM GMAIL KA USE KAR RAHE HAIN.
