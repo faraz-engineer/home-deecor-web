@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Hub - Your Ultimate Home & Garden Guide</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#14B8A6',
+                        secondary: '#0F766E'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+
+
+</head>
+
+<body class="bg-white">
+    <%- include("partials/header") %>
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Explore Cleaning and Organization</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Browse through our curated collection of home
+                    improvement ideas and inspiration</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <a href="/cleaning/ultimate-house-cleaning">
+                    <div
+                        class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/housecleaning-schedule.webp')">
+                        </div>
+
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                The Ultimate House Cleaning Schedule for Busy People</h3>
+                            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">For many people, keeping a clean home can seem like an overwhelming task.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/cleaning/clean-bathroom">
+                    <div
+                        class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/clean-a-bathroom.webp')">
+                        </div>
+
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                How to Clean a Bathroom from Top to Bottom</h3>
+                            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300"> Discover
+                                small bedroom decor ideas that actually work—maximize space, add style.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/cleaning/homemade-cleaning-products">
+                    <div
+                        class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/homemade-cleaning-products.webp')">
+                        </div>
+
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                Homemade Cleaning Products You Can Make Today</h3>
+                            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Cleaning your home doesn’t have to mean exposing yourself and your family to harsh chemicals.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/cleaning/declutter-your-home-room">
+                    <div
+                        class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/declutter-home.webp')">
+                        </div>
+
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                How to Declutter Your Home Room by Room</h3>
+                            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Clutter can accumulate over time, making your home feel chaotic and overwhelming. </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/cleaning/weekly-cleaning-room">
+                    <div
+                        class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/weekly-cleaning-routine.webp')">
+                        </div>
+
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                How to Create a Weekly Cleaning Routine That Sticks</h3>
+                            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300"> A clean home is essential for creating a relaxing and organized living space</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/cleaning/storage-small-kitchen">
+                    <div
+                        class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/storage-in-small-kitchen.webp')">
+                        </div>
+
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                How to Maximize Storage in a Small Kitchen</h3>
+                            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300"> Discover
+                                how to find your interior design style with these expert tips. </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+   <%- include("partials/footer") %>
+   <script src="/js/script.js"></script>
+</body>
+</html>

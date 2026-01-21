@@ -10,30 +10,51 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// Middleware to handle clean URLs (without .html extension)
-app.use((req, res, next) => {
-    // Skip if it's a file with extension, API route, or root
-    if (req.path.includes('.') || req.path.startsWith('/submit-') || req.path === '/') {
+// Set EJS as the view engine
+app.set('view engine', 'ejs');
+app.set('views', 'views');
+
+// Serve static files from 'public' directory with caching
+app.use(express.static('public', {
+    maxAge: '1d', // Cache for 1 day
+    setHeaders: (res, path) => {
+        if (path.endsWith('.html')) {
+            // HTML files should not be cached aggressively if they change
+            res.setHeader('Cache-Control', 'no-cache');
+        } else {
+            res.setHeader('Cache-Control', 'public, max-age=86400');
+        }
+    }
+}));
+
+// Route handler for pages
+app.get(/(.*)/, (req, res, next) => {
+    // Skip API routes or static files that might have been missed
+    if (req.path.startsWith('/submit-') || req.path.includes('.')) {
         return next();
     }
 
-    // Try to serve the HTML file
+    let page = req.path === '/' ? 'index' : req.path.substring(1);
+    // Remove trailing slash if present
+    if (page.endsWith('/')) {
+        page = page.slice(0, -1);
+    }
+
+    // Check if the ejs file exists
     const fs = require('fs');
     const path = require('path');
-    const htmlPath = path.join(__dirname, 'public', req.path + '.html');
+    let viewPath = path.join(__dirname, 'views', page + '.ejs');
 
-    if (fs.existsSync(htmlPath)) {
-        return res.sendFile(htmlPath);
+    // Handle directory roots (e.g. /cleaning/ -> /cleaning/index - no, user structure is flat files inside dir)
+    // Actually user structure: /cleaning/clean-bathroom -> view/cleaning/clean-bathroom.ejs
+
+    if (fs.existsSync(viewPath)) {
+        res.render(page);
+    } else {
+        // Try index if it's a directory? The user logic was .html mapping.
+        // Let's stick to direct mapping first.
+        next();
     }
-    next();
-});
-
-// Serve static files from 'public' directory
-app.use(express.static('public'));
-
-// Explicit root route for testing
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/public/index.html');
 });
 
 // 1. Nodemailer Transporter Setup

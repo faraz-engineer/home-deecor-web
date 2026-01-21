@@ -1,23 +1,17 @@
-async function initApp() {
-    // 1. Load Components
-    await Promise.all([
-        loadComp('header-placeholder', '/components/header.html'),
-        loadComp('footer-placeholder', '/components/footer.html')
-    ]);
-
-    // 2. Setup Logic
+// 1. Load Components - REMOVED (Handled by EJS SSR)
+// await Promise.all([
+//    loadComp('header-placeholder', '/components/header.html'),
+//    loadComp('footer-placeholder', '/components/footer.html')
+// ]);
+//
+// 2. Setup Logic
+function initApp() {
     setupMobileMenu();
     handleActiveState();
 }
 
-async function loadComp(id, path) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    try {
-        const res = await fetch(path);
-        el.innerHTML = await res.text();
-    } catch (e) { console.error("Component fail:", path); }
-}
+// Client-side includes removed
+
 
 function setupMobileMenu() {
     const btn = document.getElementById('mobile-menu-button');

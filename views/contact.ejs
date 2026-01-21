@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact us-Home Hub - Your Ultimate Home & Garden Guide</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#14B8A6',
+                        secondary: '#0F766E'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+
+
+</head>
+
+<body class="bg-white">
+    <%- include("partials/header") %>
+    <section class="relative min-h-[400px] md:min-h-[500px] flex items-center justify-center overflow-hidden"
+        style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20office%20workspace%20with%20contact%20communication%20symbols%2C%20phone%20icons%2C%20email%20symbols%2C%20and%20customer%20service%20elements%20representing%20business%20contact%20and%20support%20with%20professional%20clean%20design&width=1920&height=1080&seq=contact-hero&orientation=landscape'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-white">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">
+                    Get in <span class="text-primary">Touch</span>
+                </h1>
+                <p class="text-lg sm:text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90 animate-fade-in-up-delay">
+                    We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-white">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="animate-fade-in-up text-center">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8">Send Us a Message</h2>
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name
+                                *</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-sm">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address
+                                *</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-sm">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone
+                                Number</label>
+                            <input type="tel" id="phone" name="phone"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-sm">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject
+                                *</label>
+                            <input type="text" id="subject" name="subject" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-sm">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                        <textarea id="message" name="message" rows="6" required maxlength="500"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 resize-none text-sm"
+                            placeholder="Tell us about your project, questions, or how we can help you..."></textarea>
+                        <div class="text-right text-sm text-gray-500 mt-2">
+                            <span id="char-count">0</span>/500 characters
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <input type="checkbox" id="privacy" name="privacy" required
+                            class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary">
+                        <label for="privacy" class="text-sm text-gray-600">I agree to the <a href="#"
+                                class="text-primary hover:underline">Privacy Policy</a> and <a href="#"
+                                class="text-primary hover:underline">Terms of Service</a></label>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-primary hover:bg-secondary text-white font-medium py-3 px-6 !rounded-button transition-all duration-300 transform hover:scale-105 whitespace-nowrap">
+                        <span class="flex items-center justify-center space-x-2">
+                            <span id="submit-text">Send Message</span>
+                            <i id="submit-icon" class="ri-send-plane-line"></i>
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="write-for-us" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Write for Us</h2>
+                    <p class="text-lg text-gray-600">
+                        At Home Discovering, we welcome passionate writers who love sharing home improvement, DIY,
+                        gardening, and decor tips. If you have valuable insights or experiences to share, we’d love to
+                        feature your work on our site.
+                    </p>
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6 mt-6">Submission Guidelines:</h2>
+                        <p class="text-lg text-gray-600">
+                            Original Content: Your article must be unique and not published elsewhere.
+                            Word Count: Aim for 1000-1500 words.
+                            Clear and Simple Language: Make your article easy to read and engaging.
+                            Images: Include relevant, high-quality images.
+                            No AI-Generated Content: Only human-written content accepted.
+                            Citations: Properly credit any sources or references used.
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">What You’ll Get:</h2>
+                    <div class="space-y-6">
+                        <div class="flex flex-col space-y-2">
+                            <div class="flex items-center space-x-3">
+
+                                <span class="text-gray-700 font-medium">A Dofollow Backlink: </span>
+                            </div>
+                            <p class="text-gray-600 ml-9">A permanent backlink to your site.</p>
+                        </div>
+                        <div class="flex flex-col space-y-2">
+                            <div class="flex items-center space-x-3">
+
+                                <span class="text-gray-700 font-medium">Exposure:</span>
+                            </div>
+                            <p class="text-gray-600 ml-9">Your article will be shared with our community of home
+                                improvement enthusiasts.</p>
+                        </div>
+                        <div class="flex flex-col space-y-2">
+                            <h2 class="text-3xl font-bold text-gray-900 mb-6">Topics We’re Interested In:</h2>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-gray-700 font-medium">Home Improvement:</span>
+                            </div>
+                            <p class="text-gray-600 ml-9">Home improvement tips and tricks
+
+
+                            </p>
+                        </div>
+                        <div class="flex flex-col space-y-2">
+                            <div class="flex items-center space-x-3">
+
+                                <span class="text-gray-700 font-medium">DIY Projects:</span>
+                            </div>
+                            <p class="text-gray-600 ml-9"> DIY project ideas and tutorials</p>
+                        </div>
+                        <div class="flex flex-col space-y-2">
+                            <div class="flex items-center space-x-3">
+
+                                <span class="text-gray-700 font-medium">Gardening</span>
+                            </div>
+                            <p class="text-gray-600 ml-9">Gardening and landscaping advice</p>
+                        </div>
+                        <div class="flex flex-col space-y-2">
+                            <div class="flex items-center space-x-3">
+
+                                <span class="text-gray-700 font-medium">Home Deccor</span>
+                            </div>
+                            <p class="text-gray-600 ml-9">Home decor inspiration</p>
+                        </div>
+                        <div class="flex flex-col space-y-2">
+                            <div class="flex items-center space-x-3">
+
+                                <span class="text-gray-700 font-medium">Cleaning</span>
+                            </div>
+                            <p class="text-gray-600 ml-9">Cleaning and organization tips</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="py-12 md:py-16 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 animate-fade-in-up">Stay Updated with Home Tips</h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-8 animate-fade-in-up-delay">Get the latest home improvement
+                ideas, seasonal tips, and exclusive content delivered to your inbox</p>
+            <div class="max-w-md mx-auto animate-fade-in-up-delay-2">
+                <form id="emailForm">
+                    <div
+                        class="flex flex-col sm:flex-row bg-white rounded-lg p-2 transform hover:scale-105 transition-transform duration-300">
+                        <input type="email" id="user_email" name="user_email" placeholder="Enter your email address"
+                            class="flex-1 px-4 py-2 mb-2 sm:mb-0 border-none outline-none text-gray-700 text-sm">
+                        <button type="submit"
+                            class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-secondary transition-all duration-300 transform hover:scale-110 whitespace-nowrap">
+                            Subscribe
+                        </button>
+
+                    </div>
+                    <div id="message"></div>
+                </form>
+            </div>
+            <p class="text-sm text-gray-400 mt-4">Join over 50,000 homeowners who trust our weekly newsletter
+            </p>
+        </div>
+    </section>
+    <%- include("partials/footer") %>
+    <script src="/js/script.js"></script>
+
+    <script id="search-functionality">
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchInputs = document.querySelectorAll(
+                'input[type="text"], input[type="email"]',
+            );
+            searchInputs.forEach((input) => {
+                input.addEventListener("focus", function () {
+                    this.parentElement.classList.add(
+                        "ring-2",
+                        "ring-primary",
+                        "ring-opacity-50",
+                    );
+                });
+                input.addEventListener("blur", function () {
+                    this.parentElement.classList.remove(
+                        "ring-2",
+                        "ring-primary",
+                        "ring-opacity-50",
+                    );
+                });
+            });
+        });
+    </script>
+    <script id="smooth-scroll">
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach((link) => {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute("href"));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script id="newsletter-subscription">
+        document.addEventListener("DOMContentLoaded", function () {
+            const subscribeButton = document.querySelector("section.bg-gray-900 button");
+            const emailInput = document.querySelector(
+                'section.bg-gray-900 input[type="email"]',
+            );
+            if (subscribeButton && emailInput) {
+                subscribeButton.addEventListener("click", function () {
+                    const email = emailInput.value.trim();
+                    if (email && email.includes("@")) {
+                        const notification = document.createElement("div");
+                        notification.className =
+                            "fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 transform transition-all duration-300";
+                        notification.textContent = "Thank you for subscribing!";
+                        document.body.appendChild(notification);
+                        setTimeout(() => {
+                            notification.style.transform = "translateX(400px)";
+                            setTimeout(() => document.body.removeChild(notification), 300);
+                        }, 3000);
+                        emailInput.value = "";
+                    } else {
+                        const notification = document.createElement("div");
+                        notification.className =
+                            "fixed top-4 right-4 bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 transform transition-all duration-300";
+                        notification.textContent = "Please enter a valid email address.";
+                        document.body.appendChild(notification);
+                        setTimeout(() => {
+                            notification.style.transform = "translateX(400px)";
+                            setTimeout(() => document.body.removeChild(notification), 300);
+                        }, 3000);
+                    }
+                });
+                emailInput.addEventListener("keypress", function (e) {
+                    if (e.key === "Enter") {
+                        subscribeButton.click();
+                    }
+                });
+            }
+        });
+    </script>
+    <script id="scroll-animations">
+        document.addEventListener("DOMContentLoaded", function () {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px",
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = "1";
+                        entry.target.style.transform = "translateY(0)";
+                    }
+                });
+            }, observerOptions);
+            const animateElements = document.querySelectorAll(".bg-white");
+            animateElements.forEach((el) => {
+                el.style.opacity = "0";
+                el.style.transform = "translateY(30px)";
+                el.style.transition = "opacity 0.6s ease-out, transform 0.6s ease-out";
+                observer.observe(el);
+            });
+        });
+    </script>
+    <script>
+        document.getElementById('emailForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Default form submission rokna
+
+            const emailInput = document.getElementById('user_email');
+            const userEmail = emailInput.value;
+            const messageDiv = document.getElementById('message');
+
+            // Message area ko clear karna
+            messageDiv.textContent = 'Submitting...';
+            messageDiv.className = '';
+
+            // Data ko server (Node.js endpoint) par bhejna
+            fetch('/submit-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ user_email: userEmail }), // Data ko JSON format mein bhejna
+            })
+                .then(response => response.json()) // Server response ko JSON mein convert karna
+                .then(data => {
+                    if (data.success) {
+                        // Agar server ne success response diya
+                        messageDiv.textContent = data.message;
+                        messageDiv.className = 'success';
+                        emailInput.value = ''; // Input field clear karna
+                    } else {
+                        // Agar server ne error response diya
+                        messageDiv.textContent = data.message;
+                        messageDiv.className = 'error';
+                    }
+                })
+                .catch(error => {
+                    // Agar network ya fetch mein koi error aayi
+                    console.error('Network Error:', error);
+                    messageDiv.textContent = 'Submission failed due to a network error.';
+                    messageDiv.className = 'error';
+                });
+        });
+    </script>
+    <script>
+        // Contact Form Submission
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const form = this;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const submitText = document.getElementById('submit-text');
+            const submitIcon = document.getElementById('submit-icon');
+
+            // Get form values
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+
+            // Show loading state
+            submitText.textContent = 'Sending...';
+            submitIcon.className = 'ri-loader-4-line animate-spin';
+            submitBtn.disabled = true;
+
+            // Send data to server
+            fetch('/submit-contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        // Success notification
+                        submitText.textContent = 'Message Sent!';
+                        submitIcon.className = 'ri-check-line';
+                        submitBtn.classList.remove('bg-primary', 'hover:bg-secondary');
+                        submitBtn.classList.add('bg-green-500');
+
+                        // Show success notification
+                        const notification = document.createElement('div');
+                        notification.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
+                        notification.textContent = data.message;
+                        document.body.appendChild(notification);
+
+                        // Reset form after 2 seconds
+                        setTimeout(() => {
+                            form.reset();
+                            document.getElementById('char-count').textContent = '0';
+                            submitText.textContent = 'Send Message';
+                            submitIcon.className = 'ri-send-plane-line';
+                            submitBtn.disabled = false;
+                            submitBtn.classList.add('bg-primary', 'hover:bg-secondary');
+                            submitBtn.classList.remove('bg-green-500');
+                            notification.remove();
+                        }, 3000);
+                    } else {
+                        // Error state
+                        submitText.textContent = 'Failed to Send';
+                        submitIcon.className = 'ri-error-warning-line';
+                        submitBtn.classList.remove('bg-primary', 'hover:bg-secondary');
+                        submitBtn.classList.add('bg-red-500');
+
+                        setTimeout(() => {
+                            submitText.textContent = 'Send Message';
+                            submitIcon.className = 'ri-send-plane-line';
+                            submitBtn.disabled = false;
+                            submitBtn.classList.add('bg-primary', 'hover:bg-secondary');
+                            submitBtn.classList.remove('bg-red-500');
+                        }, 3000);
+                    }
+                })
+                .catch(error => {
+                    console.error('Network Error:', error);
+                    submitText.textContent = 'Network Error';
+                    submitIcon.className = 'ri-error-warning-line';
+                    submitBtn.classList.remove('bg-primary', 'hover:bg-secondary');
+                    submitBtn.classList.add('bg-red-500');
+
+                    setTimeout(() => {
+                        submitText.textContent = 'Send Message';
+                        submitIcon.className = 'ri-send-plane-line';
+                        submitBtn.disabled = false;
+                        submitBtn.classList.add('bg-primary', 'hover:bg-secondary');
+                        submitBtn.classList.remove('bg-red-500');
+                    }, 3000);
+                });
+        });
+
+        // Character count for message textarea
+        document.getElementById('message').addEventListener('input', function () {
+            document.getElementById('char-count').textContent = this.value.length;
+        });
+    </script>
+</body>
+
+</html>
