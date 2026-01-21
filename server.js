@@ -16,13 +16,14 @@ app.set('views', 'views');
 
 // Serve static files from 'public' directory with caching
 app.use(express.static('public', {
-    maxAge: '1d', // Cache for 1 day
+    maxAge: '1y', // Cache for 1 year
     setHeaders: (res, path) => {
         if (path.endsWith('.html')) {
             // HTML files should not be cached aggressively if they change
             res.setHeader('Cache-Control', 'no-cache');
         } else {
-            res.setHeader('Cache-Control', 'public, max-age=86400');
+            // 1 year cache for static assets (images, css, js)
+            res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
         }
     }
 }));
