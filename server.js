@@ -29,6 +29,7 @@ app.use((req, res, next) => {
         '/home-improvement-article/fix-leaky-faucit': '/home-improvement-article/fix-leaky-faucet',
         '/home-improvement-article/seal-ar-leak': '/home-improvement-article/seal-air-leak',
         '/home-improvement-article/budget-freindly-kitchen': '/home-improvement-article/budget-friendly-kitchen',
+        '/diy-project/begining-wood-working': '/diy-project/beginning-wood-working',
     };
 
     if (redirects[req.path]) {
