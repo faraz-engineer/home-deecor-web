@@ -11,6 +11,37 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+// Middleware for redirecting old URLs (spelling fixes)
+app.use((req, res, next) => {
+    // 1. Remove trailing slash (except for root '/')
+    if (req.path.length > 1 && req.path.endsWith('/')) {
+        const query = req.url.slice(req.path.length);
+        return res.redirect(301, req.path.slice(0, -1) + query);
+    }
+
+    // 2. Redirect /index to /
+    if (req.path === '/index') {
+        const query = req.url.slice(req.path.length);
+        return res.redirect(301, '/' + query);
+    }
+
+    const redirects = {
+        '/home-improvement-article/fix-leaky-faucit': '/home-improvement-article/fix-leaky-faucet',
+        '/home-improvement-article/seal-ar-leak': '/home-improvement-article/seal-air-leak',
+        '/home-improvement-article/budget-freindly-kitchen': '/home-improvement-article/budget-friendly-kitchen',
+    };
+
+    if (redirects[req.path]) {
+        return res.redirect(301, redirects[req.path]);
+    }
+
+    if (req.path.startsWith('/home-deccor-article/')) {
+        return res.redirect(301, req.path.replace('/home-deccor-article/', '/home-decor-article/'));
+    }
+
+    next();
+});
+
 // Middleware to enforce lowercase URLs
 app.use((req, res, next) => {
     if (/[A-Z]/.test(req.path)) {
