@@ -11,6 +11,14 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+// Middleware to enforce lowercase URLs
+app.use((req, res, next) => {
+    if (/[A-Z]/.test(req.path)) {
+        return res.redirect(301, req.path.toLowerCase());
+    }
+    next();
+});
+
 // Set EJS as the view engine
 app.set('view engine', 'ejs');
 app.set('views', 'views');
