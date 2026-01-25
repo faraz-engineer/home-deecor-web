@@ -5,8 +5,6 @@
     <loc>https://homediscovering.com/</loc>
     <priority>1.00</priority>
   </url>
-
-  <url>
   <url>
     <loc>https://homediscovering.com/blog</loc>
     <priority>0.80</priority>
