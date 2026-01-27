@@ -11,7 +11,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// Middleware for redirecting old URLs (spelling fixes)
+// Middleware for redirecting old URLs (spelling fixes and category removal)
 app.use((req, res, next) => {
     // 1. Remove trailing slash (except for root '/')
     if (req.path.length > 1 && req.path.endsWith('/')) {
@@ -25,11 +25,28 @@ app.use((req, res, next) => {
         return res.redirect(301, '/' + query);
     }
 
+    const categories = [
+        'cleaning',
+        'diy-project',
+        'gardening',
+        'home-decor-article',
+        'home-improvement-article',
+        'real-estate'
+    ];
+
+    // Redirect category/article to /article
+    for (const cat of categories) {
+        if (req.path.startsWith(`/${cat}/`)) {
+            const newPath = req.path.replace(`/${cat}/`, '/');
+            return res.redirect(301, newPath);
+        }
+    }
+
     const redirects = {
-        '/home-improvement-article/fix-leaky-faucit': '/home-improvement-article/fix-leaky-faucet',
-        '/home-improvement-article/seal-ar-leak': '/home-improvement-article/seal-air-leak',
-        '/home-improvement-article/budget-freindly-kitchen': '/home-improvement-article/budget-friendly-kitchen',
-        '/diy-project/begining-wood-working': '/diy-project/beginning-wood-working',
+        '/fix-leaky-faucit': '/fix-leaky-faucet',
+        '/seal-ar-leak': '/seal-air-leak',
+        '/budget-freindly-kitchen': '/budget-friendly-kitchen',
+        '/begining-wood-working': '/beginning-wood-working',
     };
 
     if (redirects[req.path]) {
@@ -37,7 +54,7 @@ app.use((req, res, next) => {
     }
 
     if (req.path.startsWith('/home-deccor-article/')) {
-        return res.redirect(301, req.path.replace('/home-deccor-article/', '/home-decor-article/'));
+        return res.redirect(301, req.path.replace('/home-deccor-article/', '/'));
     }
 
     next();
@@ -46,6 +63,7 @@ app.use((req, res, next) => {
 // Middleware to enforce lowercase URLs
 app.use((req, res, next) => {
     if (/[A-Z]/.test(req.path)) {
+        console.log(`[Redirect] Enforcing lowercase: ${req.path}`);
         return res.redirect(301, req.path.toLowerCase());
     }
     next();
@@ -55,48 +73,108 @@ app.use((req, res, next) => {
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-// Serve static files from 'public' directory with caching
+// Serve static files
 app.use(express.static('public', {
-    maxAge: '1y', // Cache for 1 year
+    maxAge: '1y',
     setHeaders: (res, path) => {
         if (path.endsWith('.html')) {
-            // HTML files should not be cached aggressively if they change
             res.setHeader('Cache-Control', 'no-cache');
         } else {
-            // 1 year cache for static assets (images, css, js)
             res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
         }
     }
 }));
 
-// Route handler for pages
+// Blog data helpers
+const { posts, getLatestPosts } = require('./postsData');
+
+// Main Route handler
 app.get(/(.*)/, (req, res, next) => {
-    // Skip API routes or static files that might have been missed
+
+    // Skip API routes or static files
     if (req.path.startsWith('/submit-') || req.path.includes('.')) {
         return next();
     }
 
-    let page = req.path === '/' ? 'index' : req.path.substring(1);
-    // Remove trailing slash if present
-    if (page.endsWith('/')) {
-        page = page.slice(0, -1);
-    }
+    const actualPath = req.path === '/' ? 'index' : req.path.substring(1).replace(/\/$/, "");
+    let page = actualPath === '' ? 'index' : actualPath;
 
-    // Check if the ejs file exists
     const fs = require('fs');
     const path = require('path');
-    let viewPath = path.join(__dirname, 'views', page + '.ejs');
 
-    // Handle directory roots (e.g. /cleaning/ -> /cleaning/index - no, user structure is flat files inside dir)
-    // Actually user structure: /cleaning/clean-bathroom -> view/cleaning/clean-bathroom.ejs
+    const searchDirs = [
+        '',
+        'cleaning',
+        'diy-project',
+        'gardening',
+        'home-decor-article',
+        'home-improvement-article',
+        'real-estate'
+    ];
 
-    if (fs.existsSync(viewPath)) {
-        res.render(page);
-    } else {
-        // Try index if it's a directory? The user logic was .html mapping.
-        // Let's stick to direct mapping first.
-        next();
+    for (const dir of searchDirs) {
+        let viewName = dir ? `${dir}/${page}` : page;
+        let viewPath = path.join(__dirname, 'views', viewName + '.ejs');
+
+        if (fs.existsSync(viewPath)) {
+            // Home page: pass latest posts for dynamic sections
+            if (viewName === 'index') {
+                const { getLatestByCategory } = require('./postsData');
+                const latestPosts = getLatestPosts(9);
+                const homeImprovementPosts = getLatestByCategory('home-improvement', 6);
+                const homeDecorPosts = getLatestByCategory('home-decor', 6);
+                const gardeningPosts = getLatestByCategory('gardening', 6);
+
+                return res.render(viewName, {
+                    latestPosts,
+                    homeImprovementPosts,
+                    homeDecorPosts,
+                    gardeningPosts
+                });
+            }
+
+            // Blog listing page: pass all posts
+            if (viewName === 'blog') {
+                return res.render(viewName, { posts });
+            }
+
+            // Category pages: pass category-specific posts
+            const categoryMap = {
+                'cleaning': 'cleaning',
+                'diy-projects': 'diy-project',
+                'gardening': 'gardening',
+                'home-decor': 'home-decor',
+                'home-improvement': 'home-improvement',
+                'real-estate': 'real-estate'
+            };
+
+            if (categoryMap[viewName]) {
+                const categoryPosts = posts.filter(p => p.category === categoryMap[viewName]);
+                return res.render(viewName, { categoryPosts });
+            }
+
+            // Article pages: pass related posts
+            if (dir) {
+                const categoryMappingForArticles = {
+                    'cleaning': 'cleaning',
+                    'diy-project': 'diy-project',
+                    'gardening': 'gardening',
+                    'home-decor-article': 'home-decor',
+                    'home-improvement-article': 'home-improvement',
+                    'real-estate': 'real-estate'
+                };
+                const articleCategory = categoryMappingForArticles[dir];
+                if (articleCategory) {
+                    const relatedPosts = posts.filter(p => p.category === articleCategory && p.slug !== page).slice(0, 5);
+                    return res.render(viewName, { relatedPosts });
+                }
+            }
+
+            return res.render(viewName);
+        }
     }
+
+    next();
 });
 
 // 1. Nodemailer Transporter Setup

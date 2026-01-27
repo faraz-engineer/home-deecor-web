@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Decor-Home Hub | Your Ultimate Home & Garden Guide</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <title>Home Decor - Home Hub | Your Ultimate Home & Garden Guide</title>
     <script src="https://cdn.tailwindcss.com/3.4.16">
     </script>
     <script>
@@ -44,119 +45,31 @@
         <section class="py-16 bg-gray-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Explore Home Deccor</h2>
-                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Browse through our curated collection of home
-                        improvement ideas and inspiration</p>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Explore Home Decor</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Discover inspiring ideas and beautiful designs to
+                        transform your living spaces</p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                    <a href="/home-decor-article/small-living-room">
-                        <div
-                            class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+                    <% categoryPosts.forEach(post=> { %>
+                        <a href="/<%= post.slug %>">
+                            <div
+                                class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
 
-                            <div class="h-48 bg-cover bg-center"
-                                style="background-image: url('/images/small-living-room.webp')">
-                            </div>
+                                <div class="h-48 bg-cover bg-center" style="background-image: url('<%= post.image %>')">
+                                </div>
 
-                            <div class="p-6">
-                                <h3
-                                    class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
-                                    How to Make a Small Living Room Look Bigger and Brighter</h3>
-                                <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
-                                    Discover
-                                    expert ways to make a small living room look bigger and brighter.</p>
+                                <div class="p-6">
+                                    <h3
+                                        class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                        <%= post.title %>
+                                    </h3>
+                                    <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
+                                        <%= post.excerpt %>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                    <a href="/home-decor-article/small-bedroom-decor">
-                        <div
-                            class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
-
-                            <div class="h-48 bg-cover bg-center"
-                                style="background-image: url('/images/bedroom-decor.webp')">
-                            </div>
-
-                            <div class="p-6">
-                                <h3
-                                    class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
-                                    Small Bedroom Decor Ideas That Actually Work in your home</h3>
-                                <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
-                                    Discover
-                                    small bedroom decor ideas that actually work—maximize space, add style.</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/home-decor-article/decorate-small-kitchen">
-                        <div
-                            class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
-
-                            <div class="h-48 bg-cover bg-center"
-                                style="background-image: url('/images/decorate-a-small-kitchen.webp')">
-                            </div>
-
-                            <div class="p-6">
-                                <h3
-                                    class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
-                                    How to Decorate a Small Kitchen Without Losing Space</h3>
-                                <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
-                                    Maximize
-                                    space in your kitchen while maintaining a stylish and functional design. </p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/home-decor-article/easy-spring-home">
-                        <div
-                            class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
-
-                            <div class="h-48 bg-cover bg-center"
-                                style="background-image: url('/images/spring-home-decor.webp')">
-                            </div>
-
-                            <div class="p-6">
-                                <h3
-                                    class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
-                                    Easy Spring Home Decor Updates for a Fresh Look</h3>
-                                <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
-                                    Revitalize
-                                    your home with easy spring home decor updates.</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/home-decor-article/diy-wall-art">
-                        <div
-                            class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
-
-                            <div class="h-48 bg-cover bg-center"
-                                style="background-image: url('/images/diy-wall-art-ideas.webp')">
-                            </div>
-
-                            <div class="p-6">
-                                <h3
-                                    class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
-                                    DIY Wall Art Ideas That Look Professionally Made</h3>
-                                <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
-                                    Transform
-                                    your walls with DIY wall art ideas that look professionally made.</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/home-decor-article/interior-design-style">
-                        <div
-                            class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
-
-                            <div class="h-48 bg-cover bg-center"
-                                style="background-image: url('/images/interior-design-style.webp')">
-                            </div>
-
-                            <div class="p-6">
-                                <h3
-                                    class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
-                                    How to Find Your Interior Design Style</h3>
-                                <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
-                                    Discover
-                                    how to find your interior design style with these expert tips. </p>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
+                        <% }) %>
                 </div>
             </div>
         </section>

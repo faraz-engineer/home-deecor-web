@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>improve-Home Hub | Your Ultimate Home & Garden Guide</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <title>Home Improvement - Home Hub | Your Ultimate Home & Garden Guide</title>
     <script src="https://cdn.tailwindcss.com/3.4.16">
     </script>
     <script>
@@ -49,116 +50,26 @@
                         improvement ideas and inspiration</p>
                 </div>
                 <div id="blogContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                    <a href="/home-improvement-article/fix-leaky-faucet">
-                        <div
-                            class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+                    <% categoryPosts.forEach(post=> { %>
+                        <a href="/<%= post.slug %>">
+                            <div
+                                class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
 
-                            <div class="h-48 bg-cover bg-center"
-                                style="background-image: url('/images/fix-a-leaky-faucet.webp')">
-                            </div>
+                                <div class="h-48 bg-cover bg-center" style="background-image: url('<%= post.image %>')">
+                                </div>
 
-                            <div class="p-6">
-                                <h3
-                                    class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
-                                    How to Fix a Leaky Faucet Without Calling a Plumber</h3>
-                                <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Learn
-                                    how
-                                    to fix a leaky faucet without calling a plumber using simple DIY steps.</p>
+                                <div class="p-6">
+                                    <h3
+                                        class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                        <%= post.title %>
+                                    </h3>
+                                    <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
+                                        <%= post.excerpt %>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                    <a href="/home-improvement-article/seal-air-leak">
-                        <div
-                            class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
-
-                            <div class="h-48 bg-cover bg-center"
-                                style="background-image: url('/images/seal-air-leak.webp')">
-                            </div>
-
-                            <div class="p-6">
-                                <h3
-                                    class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
-                                    How to Seal Air Leaks Around your Windows and Doors Easily</h3>
-                                <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300"> Learn
-                                    how
-                                    to seal air leaks around windows and doors easily. </p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/home-improvement-article/budget-friendly-kitchen">
-                        <div
-                            class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
-
-                            <div class="h-48 bg-cover bg-center"
-                                style="background-image: url('/images/kitchen-remodel.webp')">
-                            </div>
-
-                            <div class="p-6">
-                                <h3
-                                    class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
-                                    Budget-Friendly Kitchen Remodel Ideas That Feel Luxurious
-                                </h3>
-                                <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
-                                    Discover
-                                    budget-friendly kitchen remodel ideas that look luxurious.</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/home-improvement-article/fire-safety">
-                        <div
-                            class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
-
-                            <div class="h-48 bg-cover bg-center"
-                                style="background-image: url('/images/fire-safety-tips.webp')">
-                            </div>
-
-                            <div class="p-6">
-                                <h3
-                                    class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
-                                    Essential Fire Safety Tips Every Homeowner Should Always Know</h3>
-                                <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Learn
-                                    essential fire safety tips every homeowner should protect his family
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/home-improvement-article/weekend-home-project">
-                        <div
-                            class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
-
-                            <div class="h-48 bg-cover bg-center"
-                                style="background-image: url('/images/weakend-home-projects.webp')">
-                            </div>
-
-                            <div class="p-6">
-                                <h3
-                                    class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
-                                    Weekend Home Projects That Instantly Improve Property Value
-                                </h3>
-                                <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
-                                    Explore
-                                    easy weekend home projects that instantly improve property value.</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/home-improvement-article/repair-dry-wall">
-                        <div
-                            class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
-
-                            <div class="h-48 bg-cover bg-center"
-                                style="background-image: url('/images/repair-dry-wall.webp')">
-                            </div>
-
-                            <div class="p-6">
-                                <h3
-                                    class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
-                                    How to Repair Drywall Cracks: A Simple Step-by-Step Guide</h3>
-                                <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Learn
-                                    how
-                                    to repair drywall cracks with this simple step-by-step guide.</p>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
+                        <% }) %>
                 </div>
             </div>
         </section>

@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gardening-Home Hub | Your Ultimate Home & Garden Guide</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <title>Gardening - Home Hub | Your Ultimate Home & Garden Guide</title>
     <script src="https://cdn.tailwindcss.com/3.4.16">
     </script>
     <script>
@@ -49,116 +50,26 @@
                         improvement ideas and inspiration</p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                    <a href="/gardening/first-home-garden">
-                        <div
-                            class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
+                    <% categoryPosts.forEach(post=> { %>
+                        <a href="/<%= post.slug %>">
+                            <div
+                                class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
 
-                            <div class="h-48 bg-cover bg-center"
-                                style="background-image: url('/images/first-home-garden.webp')">
-                            </div>
+                                <div class="h-48 bg-cover bg-center" style="background-image: url('<%= post.image %>')">
+                                </div>
 
-                            <div class="p-6">
-                                <h3
-                                    class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
-                                    Gardening for Beginners: How to Start Your First Home Garden</h3>
-                                <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Learn
-                                    how
-                                    to start your first home garden with these easy gardening tips for beginners.</p>
+                                <div class="p-6">
+                                    <h3
+                                        class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                                        <%= post.title %>
+                                    </h3>
+                                    <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
+                                        <%= post.excerpt %>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                    <a href="/gardening/indoor-plant-alive">
-                        <div
-                            class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
-
-                            <div class="h-48 bg-cover bg-center"
-                                style="background-image: url('/images/indoor-plants-alive.webp')">
-                            </div>
-
-                            <div class="p-6">
-                                <h3
-                                    class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
-                                    How to Keep Indoor Plants Alive and Thriving</h3>
-                                <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300"> Learn
-                                    how
-                                    to keep indoor plants alive and thriving with these expert tips.</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/gardening/small-garden">
-                        <div
-                            class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
-
-                            <div class="h-48 bg-cover bg-center"
-                                style="background-image: url('/images/small-garden-ideas.webp')">
-                            </div>
-
-                            <div class="p-6">
-                                <h3
-                                    class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
-                                    Small Garden Ideas for Limited Outdoor Space
-                                </h3>
-                                <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
-                                    Explore
-                                    creative and practical small garden ideas for limited outdoor space.</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/gardening/spring-gardening">
-                        <div
-                            class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
-
-                            <div class="h-48 bg-cover bg-center"
-                                style="background-image: url('/images/spring-gardening-tips.webp')">
-                            </div>
-
-                            <div class="p-6">
-                                <h3
-                                    class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
-                                    Spring Gardening Tips for a Healthy Start</h3>
-                                <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Get
-                                    your
-                                    garden off to a healthy start with these essential spring gardening tips.</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/gardening/control-garden">
-                        <div
-                            class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
-
-                            <div class="h-48 bg-cover bg-center"
-                                style="background-image: url('/images/control-garden-pets.webp')">
-                            </div>
-
-                            <div class="p-6">
-                                <h3
-                                    class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
-                                    How to Control Garden Pests Naturally</h3>
-                                <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300"> Learn
-                                    how
-                                    to control garden pests naturally with effective, eco-friendly methods.</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/gardening/herb-garden">
-                        <div
-                            class="filter-item blog-card bg-white categories-blog shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group">
-
-                            <div class="h-48 bg-cover bg-center"
-                                style="background-image: url('/images/herb-garden-in-kitchen.webp')">
-                            </div>
-
-                            <div class="p-6">
-                                <h3
-                                    class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
-                                    How to Create an Herb Garden in Your Kitchen
-                                </h3>
-                                <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Learn
-                                    how
-                                    to create an herb garden in your kitchen with these easy tips.</p>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
+                        <% }) %>
                 </div>
             </div>
         </section>
