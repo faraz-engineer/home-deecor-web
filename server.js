@@ -47,6 +47,9 @@ app.use((req, res, next) => {
         '/seal-ar-leak': '/seal-air-leak',
         '/budget-freindly-kitchen': '/budget-friendly-kitchen',
         '/begining-wood-working': '/beginning-wood-working',
+        '/clean-faster': '/clean-faster-simple-tips-to-tidy-your-home-quickly',
+        '/clean-cabinets': '/clean-cabinets-easy-steps-for-a-fresh-and-shiny-kitchen',
+        '/reduce-plastic-at-home': '/reduce-plastic-at-home-easy-swaps-that-really-help',
     };
 
     if (redirects[req.path]) {

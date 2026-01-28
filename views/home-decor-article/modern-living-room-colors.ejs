@@ -62,7 +62,7 @@
                             </h1>
 
                             <div class="mb-8">
-                                <img src="/images/living-room-colors.webp"
+                                <img src="/images/modern-living-room-color-combinations.webp"
                                     alt="Stylish modern living room with balanced color palette"
                                     class="w-full h-80 object-cover rounded-lg shadow-lg" fetchpriority="high">
                             </div>
@@ -244,24 +244,26 @@
                             <div class="bg-gray-50 rounded-lg p-6">
                                 <h3 class="text-xl font-bold text-gray-900 mb-4">Related Articles</h3>
                                 <div class="space-y-4">
-                                    <% relatedPosts.forEach(post=> { %>
-                                        <a href="/<%= post.slug %>" class="group block">
-                                            <div class="flex gap-4">
-                                                <img src="<%= post.image %>" alt="<%= post.title %>"
-                                                    class="w-16 h-16 object-cover rounded-lg flex-shrink-0">
-                                                <div>
-                                                    <h4
-                                                        class="text-sm font-semibold text-gray-900 group-hover:text-primary transition-colors line-clamp-2">
-                                                        <%= post.title %>
-                                                    </h4>
-                                                    <p class="text-xs text-gray-500 mt-1">
-                                                        <%= new Date(post.date).toLocaleDateString('en-US', {
-                                                            month: 'short' , day: 'numeric' , year: 'numeric' }) %>
-                                                    </p>
+                                    <% if (typeof relatedPosts !== 'undefined' && relatedPosts) { %>
+                                        <% relatedPosts.forEach(function (post) { %>
+                                            <a href="/<%= post.slug %>" class="group block">
+                                                <div class="flex gap-4">
+                                                    <img src="<%= post.image %>" alt="<%= post.title %>"
+                                                        class="w-16 h-16 object-cover rounded-lg flex-shrink-0">
+                                                    <div>
+                                                        <h4
+                                                            class="text-sm font-semibold text-gray-900 group-hover:text-primary transition-colors line-clamp-2">
+                                                            <%= post.title %>
+                                                        </h4>
+                                                        <p class="text-xs text-gray-500 mt-1">
+                                                            <%= new Date(post.date).toLocaleDateString('en-US', {
+                                                                month: 'short' , day: 'numeric' , year: 'numeric' }) %>
+                                                        </p>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </a>
+                                            </a>
                                         <% }) %>
+                                    <% } %>
                                 </div>
                             </div>
                         </div>
